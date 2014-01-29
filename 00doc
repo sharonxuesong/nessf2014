@@ -13,17 +13,20 @@ Overall: Our work is important and necessary for discovering low-mass exoplanets
 		tau Ceti
 		ups And?
 		TTV targets like HIP 14810
-- Bring another 10-m class telescope to Keck precision!
-- Prep work for the awesome project Minerva.
+- Bring another 10-m class telescope to Keck precision! which is also prep work for the awesome project Minerva.
 
 
 ####################################################
 	Potential Weaknesses to Shore Up
 ####################################################
 - Why bother doing this while we have HARPS-North?
+	There are very few good low-mass planet system candidates have bright enough host stars for HARPS-N to follow up. 10m telescopes win!
 - How does Minerva compete with HARPS-S and HARPS-N?
+	Cadence! Minerva will be fully robotic and dedicated to do high-cadence survey.
 - Really, how many Kepler Earth-like planet candidates are there left for Keck to confirm?
+	On the order of 1000-3000 even considering magnitude limits! A lot!
 - There are so many aspects in improving RV, is this the current bottleneck and the most important next thing to do?
+	The proposed work deals with systematic effects that have ALREADY BEEN IDENTIFIED, but just not removed! This is the natural next step! Especially we are talking about annual signal here.
 
 
 ####################################################
@@ -34,7 +37,7 @@ Finding Habitable Rocky Exoplanets with Precise Radial Velocities - "Rocky" migh
 Stepping towards Discovery of Earth 2.0 with Precise Radial Velocities - "stepping towards" is BAD
 Enabling Discoveries of Habitable Rocky Exoplanets with Precise Radial Velocities
 
-Change 'Velocity' to 'Velocimetry'
+Change 'Velocity' to 'Velocimetry', since we're talking about a method here.
 
 Improving Radial Velocimetry for the Lowest Mass Exoplanets
 Finding the Lowest Mass Exoplanets with Improved Radial Velocimetry - this is it!
@@ -43,15 +46,22 @@ Finding the Lowest Mass Exoplanets with Improved Radial Velocimetry - this is it
 ####################################################
 	Misc Info & Notes
 ####################################################
+Ok to use the term 'post-Kepler era', but use it in a positive tune.
+
 First light instrument for GMT: G-CLEF for precise RV
 http://www.gmto.org/g-clef.html
 
 According to exoplanets.org, there are 1691 KOIs with
 MASS[mearth] < 4.0
 LOTS of small-mass exoplanets awaiting confirmation!
+Number of planets with also KP (Kepler mag) limits:
+accessible to Keck: MASS[mearth] < 4.0 AND KP < 14.0
+accessible to HARPS-N: MASS[mearth] < 4.0 AND KP < 10.0 (only 9!)
+Better to check radius limit: R[rearth] < 4.0 and KP < 14 etc.
 
 elevation of McDonald Observatory = 6790 ft
 elevation of Keck Observatory = 13599 ft
+
 
 ####################################################
 	Proposal Summary
