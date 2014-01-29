@@ -3,17 +3,19 @@ General Info regarding NESSF 2014
 ####################################################
 	Selling Points
 ####################################################
-Overall: Our work directly enables discoveries of Earth-like exoplanets.
-- In Kepler 2.0 and post-Kepler era (on a positive tune), more Kepler follow-up and confirmation of Earth-like planets is limited by Keck precision - we are improving Keck precision to do that!
-- In post-Kepler and pre-TESS era, dedicated RV survey will discover more Earth-like planets around nearby bright stars - we are preparing for project Minerva! and btw the upgraded HET/HRS.
-- In TESS era, Minerva will follow up TESS targets.
+Overall: Our work is important and necessary for discovering low-mass exoplanets.
 
-Make sure to mention:
-CHIRON
-GJ 581
-alpha Cen B
-tau Ceti
-http://adsabs.harvard.edu/abs/2013A%26A...551A..79T
+- Improved Keck RV precision!
+	- Synergy with CHIRON
+	- Revisit systems like:
+		GJ 581
+		alpha Cen B
+		tau Ceti
+		ups And?
+		TTV targets like HIP 14810
+- Bring another 10-m class telescope to Keck precision!
+- Prep work for the awesome project Minerva.
+
 
 ####################################################
 	Potential Weaknesses to Shore Up
@@ -37,6 +39,19 @@ Change 'Velocity' to 'Velocimetry'
 Improving Radial Velocimetry for the Lowest Mass Exoplanets
 Finding the Lowest Mass Exoplanets with Improved Radial Velocimetry - this is it!
 
+
+####################################################
+	Misc Info & Notes
+####################################################
+First light instrument for GMT: G-CLEF for precise RV
+http://www.gmto.org/g-clef.html
+
+According to exoplanets.org, there are 1691 KOIs with
+MASS[mearth] < 4.0
+LOTS of small-mass exoplanets awaiting confirmation!
+
+elevation of McDonald Observatory = 6790 ft
+elevation of Keck Observatory = 13599 ft
 
 ####################################################
 	Proposal Summary

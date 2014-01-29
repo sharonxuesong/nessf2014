@@ -61,156 +61,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Objectives and Expected Significance}
 
-The 9.2-meter Hobby-Eberly Telescope (HET) is poised to have comparable
-power to Keck in its capabilities of exoplanet search. With multiple
-upcoming upgrades for the telescope and its High-Resolution
-Spectrograph (HRS), the throughput and radial velocity (RV) precision
-of \hrs\ will be improved to the same level of Keck, which will enable
-HRS to discover and follow up planets and \kepler\ candidates around
-relatively faint stars that are far away.
 
-Meanwhile, bright, nearby stars are very important targets for finding
-Earth- or super-Earth-size planets in the Habitable Zone and/or with
-large transit probability to enable potential studies on their
-atmosphere. This is the primary science goal of project \minerva, an
-array of four small telescopes that will perform dedicated RV
-monitoring on a carefully-selected ensemble of nearby stars.
 
-It is the broad theme of this proposal \textbf{to develop data
-  reduction and Doppler pipelines for \hrs\ and \textit{Minerva} with
-  the ultimate goal to find exoplanets around stars near and far}. We will
-% 1. prepare for future
 \begin{itemize}[leftmargin=2.2em]
     \vspace{-3pt}
 \item Develop data reduction and Doppler (RV extraction) pipeline
   for the upgraded \hrs\ and \minerva.
     \vspace{-3pt}
 \end{itemize}
-Upon upgrade, the throughput of \hrs\ will be improved by a factor of
-$\sim$5. HET will become the second telescope, besides Keck, that is
-suitable for RV follow-up on the stars hosting planet candidates
-discovered by \kepler. This will make the \kepler\ follow-up programs
-more efficient. It will also benefit other planet search programs on
-\hrs\ such as surveys on long-period planets and multiple-planet
-systems.
 
-As a dedicated RV survey project, \minerva\ is expected to discover
-$\gtrsim 10$ Earth- to super-Earth-size planets with orbital period of
-1--100 days around nearby stars, with 3--5 expected to be in the
-Habitable Zones of their host stars
-\citep{bottom2013,hogstrom2013}. The similarity between the spectral
-data products of the upgraded \hrs\ and \minerva\ provides us the
-opportunity to develop a single pipeline that will work equally well
-for both.
 
-% 2. improve current
 \begin{itemize}[leftmargin=2.2em]
   \vspace{-3pt}
 \item Improve the RV precision of the current \hrs.
   \vspace{-3pt}
 \end{itemize}
-By simply implementing the California Planet Survey (CPS) Doppler
-pipeline without tailoring and refining it for the fiber-fed HRS, we have
-already achieved $\sim$3 m/s \citep{johnson2011,wang2011,wang2012}. As
-some essential parts of HRS will remain the same after the upgrade,
-understanding the current bottleneck of its RV precision is essential
-for ensuring a high-precision new \hrs. It will also make the
-$\sim$10-year baseline \hrs\ archival data a very valuable asset for 
-detecting multiple-planet systems and long-period planets, e.g. the
-Solar system analogs and Jupiter analogs.
 
-% 3. EOD
-\begin{itemize}[leftmargin=2.2em]
-    \vspace{-3pt}
-\item Maintain and improve the Exoplanet Orbit Database (EOD; 
-\citealt{wright2011})\footnote{This database (at exoplanets.org) is a
-  compilation of all exoplanets that have quality peer-reviewed
-  orbital measurements.} as a statistical study tool and an orbital
-information database for exoplanet research.
-  \vspace{-3pt}
-\end{itemize}
-We plan to incorporate the up-to-date \kepler\ catalog of planet
-candidates into EOD. \textbf{This will put the \kepler\ planet candidates in
-the context of all confirmed planets discovered by other programs and
-methods.} EOD will also be the venue to keep close update on the
-additional or refined orbital parameters of the \kepler\ planets that
-are acquired through follow-up programs. This provides the community
-with a complete and up-to-date collection of the reliable exoplanets
-(and candidates) and their orbital parameters, and it is a powerful 
-statistical tool for studies on planet occurrence rate and so on.
-
-
-%---------------------------------------------------------------------------------------
-% trial & error, recycle for all
-\begin{comment}
-This will make it the second telescope that is suitable for planet
-discovery and characterization through RV observations on relatively
-faint stars that are far away, such as the stars that host planet
-candidates discovered by \kepler.
-  
-Among the 678 confirmed extrasolar planets as of today, 410 of them
-were discovered through Radial Velocity (RV) measurement
-(exoplanets.org; Wright\etal2011). The RV observation on stars near
-and far plays an important role in both the discovery and the
-characterization of exoplanets. In particular, RV follow-up plays an
-important role in confirming the Kepler planet candidates, as well as
-measuring their orbital and planetary parameters such as eccentricity
-and mass.
-
-Currently, the only $\sim$10-meter telescope that is capable of Kepler
-follow-up in the Northern Hemisphere is the Keck telescopes, which has
-an RV precision of $\sim$1 \mps. 
-
-The launch of Kepler has dramatically increased the number of planet
-candidates, and now there are 2740 potential planets in the Kepler
-field, though so far only 105 planets are confirmed
-(Batalha\etal2013). RV follow-up plays an important role in confirming
-of the Kepler candidates, as well as measuring their orbital and
-planetary parameters such as eccentricity and minimum mass, $\msini$.
-
-% background
-rv has been very successful. Kepler reshaped the field. rv follow-up
-becomes important for kepler targets. need large telescope with high
-rv precison. the only good enough telescope in the north is keck.
-
-% how het is important
-het is poised to be as good as keck. this will be the second 10m scale
-telescope that has rv precision of 1m/s and below. our work aims to bring this
-telescope to the game --- this is important for both Kepler follow-up and rv
-exoplanet discovery on its own.
-
-% section 3
-key questions listed
-under `Astrophysics' in the NASA's Science Mission Directorate
-2007--2016 Science Plan, ``Create a census of extrasolar planets and
-measuring their properties".
-
-% section 2.2
-The ability of fitting an pure iodine spectrum taken by the
-spectrograph can reflect how well the IP is being modeled. The typical
-$\chi_\nu^2$ value that we obtain for fitting iodine spectra with a
-generic IP model, Gauss-Hermite polynomials, is about 2.5, while for
-Keck/HIRES, the $\chi_\nu^2$ value is typically 1.05. The current
-successful IP model for Keck/HIRES (sum of Gaussians) in the CPS
-pipeline is the product of careful studies and numerous trials with IP
-modeling. A better understanding of the IP of HRS will bring visible
-improvements to its RV precision, since the IP modeling affects
-directly several key procedures in the Doppler pipeline, such as the
-creation of stellar spectrum template and the forward-modeling of the
-observed stellar$+$iodine spectrum. We are at the beginning of this
-endeavour, and we are confident that, with our experience with the
-Keck/HIRES IP modeling, we can well characterize the HRS IP to achieve
-a significant improvement in its RV precision.
-
-% we are trying everything we can
-We are also scrutinizing all aspects of the instrument and our
-pipeline for places to improve. For example, we have recently
-re-scanned the iodine cell used at HRS to assess the effects of cell
-temperature change, which appears to be insignificant. The new iodine
-scan, however, differs from the old one, and we are currently
-investigating the reason behind this and the effects it brings.
-\end{comment}
-%---------------------------------------------------------------------------------------
 
 
 
@@ -224,138 +90,11 @@ investigating the reason behind this and the effects it brings.
 \subsection{Developing Data Reduction and Doppler Pipeline for the \\
   Upgraded HET/HRS and Minerva}\label{develop} 
 
-% background
-The current \hrs, with its long term RV precision around 3--5 m/s
-\citep{baluev2009,wang2011}, has made several discoveries of
-exoplanetary systems (e.g.,
-\citealt{wittenmyer2009,gettel2012,wang2012}). The key factor limiting
-its science capabilities and preventing it from performing extensive
-\kepler\ follow-up is its low throughput.
-
-% explain the upgrade
-However, the 2013 upgrade will greatly improve the throughput and will
-enable \hrs\ to perform extensive \kepler\ follow-up. The telescope
-will gain a factor of 1.4 in throughput as a result of better
-tracking, better dome temperature control, and a better prime focus
-optics. The throughput of HRS itself will also see an improvement of a
-factor of 1.5--2 thanks to an added image slicer, a new cross
-disperser, and a new optical configuration. Together, all the upgrades
-on \hrs\ will improve its throughput in the wavelength range of the
-iodine region by a factor of $\sim$5.
-
-% what programs are we gonna pursue
-We plan to have the data reduction and Doppler (RV extraction)
-pipelines for the upgraded HRS ready when it is back online, which can
-be late 2013 or early 2014. We will use the new \hrs\ to:
-\begin{itemize}[leftmargin=1.5em]
-      \vspace{-3pt}
-  \item Follow up the \kepler\ Earth or super-Earth candidates to look
-    for non-transiting gas giants further out in the system. The
-    \kepler\ Earth or super-Earth candidates, especially the ones in
-    Habitable Zones, are precious examples for answering questions
-    such as the occurrence rate of the Solar system, the architecture
-    of planetary systems with rocky planets, and the role that gas
-    giant may have played in `fostering' the habitability of the inner
-    rocky planets through dynamical evolution \citep{wetherill1994,horner2008}.
-        \vspace{-3pt}
-  \item Follow up the \kepler\ systems that show transit timing
-    variations (TTVs), which are signposts of additional planets in the system
-    (e.g. \citealt{steffen2013}). RV follow-up will reveal the full picture of
-    the architecture of these systems, and is crucial for
-    understanding occurrence rate of multiple-planet systems, the
-    dynamics of planetary systems, as well as planet formation
-    history.
-        \vspace{-3pt}
-  \item Use RV follow-up to validate/confirm the \kepler\ planet
-    candidates, which will greatly increase the efficiency of RV
-    validation/confirmation of \kepler\ candidates as HET joins Keck
-    in this enormous and important task.
-        \vspace{-3pt}
-\end{itemize}
-
-% what kind of data reduction pipeline pipeline is needed?
-To be able to work with the upgraded \hrs, we need to make adjustments
-and new developments on our current pipelines. The upgraded HRS will
-produce spectral data in a different format. The newly added image
-slicer will slice the fiber image into four parts, place them in
-parallel, and feed them into the slit. Therefore, each of the spectral
-orders will have four traces that are parallel and imaged close to
-each other. This requires modifications and additions to the existing
-spectral data reduction pipeline from bias correction and flat
-fielding all the way to spectrum extraction. New elements will also be
-needed for sky subtraction as a sky fiber is added, and
-for combining four traces together to generate the final spectrum for
-each order. Since we have set up the data reduction pipeline for the
-current HRS (by adopting and modifying the REDUCE package;
-\citealt{reduce2002}), we are confident about developing a
-reliable new pipeline for the upgraded HRS.
-
-% how about doppler pipeline, and upgrade's effect on RV precision
-The upgrades of HRS will enhance its stability and
-make it a better instrument for precise RV measurements in general. We
-will modify our current Doppler pipeline so that it is
-compatible with the new spectral format and the new instrumental
-properties such as the instrumental profile (IP; also called the
-point/line-spread function or the instrumental response function).
-We will also be actively improving the Doppler pipeline to make sure
-that it is of $\leq 1$ m/s precision once the upgraded \hrs\ is in
-action (see the next section for more details). This work will be
-greatly aided by our experience of implementing the CPS Doppler
-pipeline for \hrs\ \citep{johnson2011,wang2012} and our close
-collaboration with the CPS group.
-
-% Introduction to Minerva. How \hrs\ pipeline also prepares for
-% Minerva, and how Minerva differs. 
-The data reduction and Doppler pipelines we develop for the upgraded
-\hrs\ can also be applied to the spectral data produced by
-\minerva\ (PI: John Johnson, Co-I: Jason Wright, Phil Murihead, Nate
-McCrady). \minerva\ is a dedicated RV monitoring project on nearby
-stars at Palomar Mountain to look for Earths and super-Earths that are
-in the Habitable Zone and/or with high transit probability. It
-consists of an array of four 0.7 meter telescopes with a vacuum-sealed
-fiber-fed spectrograph, and it is designed to have $\leq 0.8$ m/s RV
-precision \citep{bottom2013}. The spectral images will also have four
-parallel traces for each spectral order, and our pipeline will be able
-to combine these traces and measure their RV shift just like for \hrs,
-or extract the four spectra and their RVs independently for each
-telescope. Project \minerva\ has finished the preliminary design
-review phase, and the first telescope is expected to be installed on
-Palomar Mountain by the end of 2013.
-
-
 %---------------------------------------------------------------------------------------
 \vspace{-3pt}
 \subsection{Improving the RV Precision of the Current HET/HRS}
 
-% link between future and current, re-emphasize significance of
-% improve current
-To fully exploit the advantages brought by the upgrades of \hrs, it is
-crucial to understand what is limiting its current RV precision, how
-the upgrades would solve its current problems, and if more hardware
-improvements are needed. The archival \hrs\ RV data with a
-$\sim$10-year baseline provides a valuable and unique opportunity to
-study the RV performances of fiber-fed spectrographs and their
-long-term RV stability in general. A higher RV precision for the
-current \hrs\ will also enable more science return on its archival
-data, such as discovering long-period planets (Jupiter analogs) and
-Solar system analogs.
-
-% what we have achieved (185144 precision comp. to keck), and our
-% experience with dealing with long-baseline hrs data
-We have already implemented the CPS Doppler pipeline for \hrs. This is
-the pipeline behind the successful CPS programs that discovered the
-majority of RV exoplanets at Keck and Lick Observatories. Although this pipeline
-was not designed to work with the fiber-fed HRS, it has achieved
-long-term ($\sim$4 years) precision of 3.6 m/s on the RV standard star
-$\sigma$ Draconis (HD 185144), where the long-term RV precision of
-Keck on this star is 2.3 m/s \citep{wang2011}. Using this pipeline and data including
-archival \hrs\ RVs as early as 2004, we discovered a second planet in
-the HD 37605 system, HD 37605$c$, the 10th Jupiter analog in the peer
-reviewed literature, with a 7.5-year period and $\msini = 3.4\ \mjup$
-on a circular orbit \citep{wang2012}. Figure~\ref{fit} shows the
-Keplerian orbital fit for the HD 37605 system and the \hrs\ RV data,
-with residuals plotted in the lower panel.
-
+\begin{comment}
 \begin{wrapfigure}{r}{0.51\textwidth}
   \vspace{-35pt}
   \begin{center}
@@ -376,84 +115,8 @@ with residuals plotted in the lower panel.
   \vspace{-8pt}  
   \label{fit}
 \end{wrapfigure}
+\end{comment}
 
-% how 37605 reveals the problems and challenges (though temperature
-% stablization helped).
-Temperature stability in the spectrograph room of \hrs\ was identified
-early on as one of the contributing factors to the RV systematic
-errors, and this issue was resolved since the installation of a fine
-temperature control system in March 2008 (J.~Bean, L.~Ramsey,
-P.~McQueen private communications). We confirmed the improvement in RV 
-precision as a result of this upgrade in our analysis with the HD
-37605 data, which is illustrated in the lower panel of
-Figure~\ref{fit}. The RMS of \hrs\ velocities with respect to the best
-Keplerian fit of the HD 37605 system is 9 m/s for data before March
-2008, and it is reduced to 6 m/s for data afterwards. Such improvement
-is encouraging, and a closer look at the data and the intermediate
-products of the Doppler pipeline reveals even more potential
-contributors to the RV instability of \hrs.
-
-% identified current problems and our plan to solve them:
-% the ip problem = the core
-One major issue is to model correctly the instrumental profile (IP) of
-HRS. IP modeling is a crucial part of the precise RV work with iodine
-calibration, as it affects directly several key procedures in the
-Doppler pipeline, such as the creation of stellar spectrum template
-and the forward-modeling of the observed stellar$+$iodine
-spectrum. How well the IP is being modeled can be tested by fitting an
-pure iodine spectrum taken by the spectrograph. The typical
-$\chi_\nu^2$ value that we obtain for fitting iodine spectra with a
-generic IP model (Gauss-Hermite polynomials) is about 2.5, while for
-Keck/HIRES, the $\chi_\nu^2$ value is typically 1.05 (John Johnson
-private communications). The current successful IP model for
-Keck/HIRES (sum of Gaussians) in the CPS pipeline is the product of
-careful studies and numerous trials with IP modeling.  A better
-understanding of the IP of HRS will bring visible improvements to its
-RV precision. We are at the beginning of this endeavour, and we are
-confident that, with our experience with the Keck/HIRES IP modeling,
-we can well characterize the HRS IP to achieve a significant
-improvement in its RV precision.
-
-
-%---------------------------------------------------------------------------------------
-\vspace{-3pt}
-\subsection{Maintaining and Improving the Exoplanet Orbit Database \label{database}}
-
-% our purpose, and we are popular!
-The Exoplanet Orbit Database (EOD; \citealt{wright2011}; exoplanets.org)
-aims to provide a complete and reliable database of exoplanets orbital
-information for both the scientific community and the general
-public. We maintain a complete collections of {\it peer reviewed} orbital
-parameters on all confirmed planets as well as the \kepler\ planet
-candidates. Our website is the top 2 search result on Google for
-keyword ``exoplanets" (after {\it Wikipedia} page), and our site
-traffic is on average over 200 hits a day including 80 returned
-viewers.
-
-% Kepler!
-Since most of the confirmed exoplanets today are discovered by
-non-transiting methods, it is important to put the
-\kepler\ planets/candidates into the context of all confirmed planets
-discovered by various programs with different target-selection
-strategies. In 2012, we included the first two releases of the
-\kepler\ planet candidate catalogs in our database, and we plan to
-incorporate very soon the newest releases \citep{batalha2013}. We will
-update their validation/confirmation status and their newest orbital
-information from follow-up programs such as RV, TTV, and imaging. We
-will also keep their host star properties up-to-date as more
-spectroscopic observations and analyses become available for
-\kepler\ stars.
-
-% pretty words on maintaining the catalog etc.
-The compilation of all reliable planets/candidates with good orbital
-parameters and host star characterization is crucial for estimating
-occurrence rates of various types of planets hosted by a variety of
-stars. With the EOD, we maintain and improve such a compilation. We
-keep our database up-to-date diligently by examining the daily postings
-on the arXiv, and extract new or refined orbital information. In the
-era of \kepler\ when the number of planets/candidates are counted by
-thousands, such statistical power will greatly advance our
-understanding of the architecture and formation of exoplanet systems.
 
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -511,13 +174,13 @@ targets for JWST to characterize their planetary atmospheres.
 \section{Relation to PI's Other NASA Grants}
 
 The PI of this proposal, Prof.~Jason Wright, has received NASA Keck
-time to search for long-period planet and multiple planet systems. The
-work proposed here will continue this effort as the upgraded \hrs\ is
-expected to follow up some if not all of the systems in the future.
+time to search for long-period planet and multiple planet systems.
 The PI has also received NASA Keck time to follow up a
-\kepler\ planetary system with a strong TTV signal (Co-I Eric Ford). We
-will continue such effort with the upgraded \hrs\ to follow up and
-study more \kepler\ systems with TTVs (Section 2.1).
+\kepler\ planetary system with a strong TTV signal (Co-I Eric
+Ford). Both of these programs will of no doubt benefit from the
+improved Keck RV precision, and the upgraded \hrs\ is expected to
+follow up some if not all of the long-period planet systems and
+\kepler\ TTV systems in the future.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -525,6 +188,7 @@ study more \kepler\ systems with TTVs (Section 2.1).
 %\addcontentsline{toc}{section}{References}
 \vspace{-3pt}
 \bibliographystyle{apj}	% (uses file "xxx.bst")
-\bibliography{references}
+{\footnotesize % smaller fonts for references
+\bibliography{references}}
 
 \end{document}
