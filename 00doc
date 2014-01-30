@@ -54,10 +54,14 @@ http://www.gmto.org/g-clef.html
 According to exoplanets.org, there are 1691 KOIs with
 MASS[mearth] < 4.0
 LOTS of small-mass exoplanets awaiting confirmation!
-Number of planets with also KP (Kepler mag) limits:
-accessible to Keck: MASS[mearth] < 4.0 AND KP < 14.0
-accessible to HARPS-N: MASS[mearth] < 4.0 AND KP < 10.0 (only 9!)
-Better to check radius limit: R[rearth] < 4.0 and KP < 14 etc.
+For R<2 Rearth KOIs:
+KP<9, there are only 6.
+KP<13, there are 267.
+KP < 14, there are 632.
+
+For M<4 Mearth KOIs (I guess these two are roughly equivalent):
+KP<9, there are only 6.
+KP<13, there are 264.
 
 elevation of McDonald Observatory = 6790 ft
 elevation of Keck Observatory = 13599 ft
