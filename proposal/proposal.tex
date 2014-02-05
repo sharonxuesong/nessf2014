@@ -1,6 +1,4 @@
-% v0 draft with paragraph plans, first draft
-% v1 improved upon feedbacks from Jason, and spell checks
-% v2 my own proofread & improvements
+% NESSF 2014 proposal
 
 \documentclass[12pt]{article}
 
@@ -9,7 +7,13 @@
 \usepackage{natbib}
 %\usepackage{natbib,natbibspacing}
 \setlength{\bibsep}{3pt} % spacing for bibliography items
-\citestyle{aa}
+\citestyle{aa} % apj type
+%\citestyle{plain} ; number style
+
+% try smaller section title fonts
+\usepackage{sectsty}
+\sectionfont{\large}
+\subsectionfont{\normalsize}
 
 \pdfpagewidth=8.5in
 \pdfpageheight=11in
@@ -40,6 +44,7 @@
 \def\msini{M\sin{i}}
 \def\mjup{M_{\rm Jup}}
 \def\msol{M_{\odot}}
+\def\mearth{M_{\oplus}}
 \def\degree{^{\circ}}
 \def\leq{\leqslant}
 \def\geq{\geqslant}
@@ -52,30 +57,95 @@
 %colorlinks,
 %plainpages=false]{hyperref}
 
-
 \begin{document}
 
 %\tableofcontents
 %\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Objectives and Expected Significance}
+% title
+\title{\vspace{-45pt} \bf \Large Finding the Lowest Mass Exoplanets with
+  \\ Improved Radial Velocimetry \vspace{-6pt}}
+\author{\normalsize Sharon Xuesong Wang}
+\date{}
+\maketitle
 
-% Finding low-mass exoplanets is important and interesting. Kepler has
-% found a lot of candidates, but to measure the mass we need RV.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-30pt}
+\section{Overview}
+
+% An overview of awesomeness of finding low-mass exoplanets.
+The excellent synergy between NASA's \kepler\ mission and the
+ground-based radial velocity (RV) surveys has made numerous exciting
+discoveries of low-mass exoplanets (add ref: e.g., Howard, Pepe,
+Marcy). This has brought the field of exoplanets into an era of
+booming discoveries of small and potentially rocky planets (add ref:
+Weiss) with the great promise towards the discovery of Earth analogs
+in the near future.
+
+% But... precise RV is yet to be more precise.
+In the post-\kepler\ era, radial velocimetry will undoubtedly continue
+to play a key role in validating \kepler\ candidates and measuring
+their masses, as well as detecting exoplanets independently. However,
+the current precision of radial velocimetry (0.5--1~\mps) acts as one
+of the major limiting factors in detecting lower mass
+exoplanets. Breaking this limit is critical for pushing the lower mass
+boundary of the exoplanet ensemble. It is also an absolutely
+necessary step towards finding Earth-mass ($\mearth$) exoplanets in
+the habitable zone around Sun-like stars, which requires an RV
+precision of $\sim$0.1 \mps.
+
+% What we propose to do
+\textbf{We propose to improve the RV precision of several leading RV
+  instruments through removal of systematic errors and other
+  exploratory work.} Through our pilot study, we have identified
+several contributing factors to RV systematic errors for the first
+time. These factors contribute to the RV error budget at
+$\sim$1~\mps\ level, and thus they set the floor of long-term RV
+precision at 1~\mps\ if not carefully studied and removed.
+
+% The great science outcome
+The primary instrument we work with is the High Resolution Echelle
+Spectrometer (HIRES) on Keck I. 
 
 
+%---------------------------------------------------------------------------------------
+% RECYCLE BIN
+\begin{comment}
+We will work with the two leading RV instruments on 10-meter-class
+telescopes: the High Resolution Echelle Spectrometer (HIRES) on Keck I
+and the High Resolution Spectrograph (HRS) on the Hobby-Eberly
+Telescope (HET).
+
+Our work also has great synergy with two very high RV precision
+instruments on smaller telescopes: CHIRON on the 1.5m SMARTS
+telescope at CTIO and the upcoming project Minerva with an array of
+four 0.7m telescopes.
+  
+The field of exoplanet is progressing in a fast pace towards the
+discovery of Earth-like planets around other stars. During the past
+decades, we have moved on from the age of booming discoveries of
+Jupiter-mass exoplanets via radial velocimetry (add ref) to the
+\kepler\ era where there are thousands of Earth- and super-Earth-size
+exoplanet candidates (add ref). Moreover, great promises lie ahead with
+future ground-based instruments (e.g., ESPRESSO; add ref) or space
+missions (e.g., TESS; add ref).
+\end{comment}
+%---------------------------------------------------------------------------------------
 
 
-% But... current RV precision is limited by systematics and poorly
-% understood stellar noises. To understand stellar noise, we must eliminate
-% systematics as much as possible.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-3pt}
+\section{The Identified in Precise Radial Velocimetry}
+  
+Importance of RV work, and the current limiting factors in precise RV:
+`jitter' and what it means.
 
+Provide examples of systems that suffer from this.
 
-
-% We are going to address this BUT in this proposal: we have ALREADY
-% identified several systematic contributions, and we propose to
-% eliminate them.
+We have identified several aspects that can improve the precision of
+radial velocimetry with two 10-meter-class telescopes, with great
+synergy with smaller dedicated RV projects such as CHIRON and \minerva.
 
 \begin{itemize}[leftmargin=2.2em]
     \vspace{-3pt}
@@ -85,45 +155,22 @@
 \end{itemize}
 
 
-\begin{itemize}[leftmargin=2.2em]
-  \vspace{-3pt}
-\item Perform pilot studies for the upcoming new \hrs\ and project
-  \minerva.
-  \vspace{-3pt}
-\end{itemize}
-
-
-% After this is done, there are plenty of wonderful science that will
-% come out of this.
-We can reanalyze the $\tau$ Ceti system \citep{tuomi2013}.
-
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-3pt}
-\section{Methodology}
+\section{Proposed Work}
 
+We propose to fix the following things:
+\begin{itemize}
+  \item Telluric lines.
+  \item Wavelength-dependent statistical weighting.
+  \item Iodine FTS validation.
+  \item Data reduction and IP analysis.
+\end{itemize}
 
-%---------------------------------------------------------------------------------------
-\vspace{-3pt}
-\subsection{Improving the RV Precision of Keck}\label{keck} 
+Each `subsection' addresses one of the above.
 
-Telluric lines.
-
-Wavelength-dependent statistical weighting.
-
-
-%---------------------------------------------------------------------------------------
-\vspace{-3pt}
-\subsection{Pilot Studies for the Upcoming New \hrs\ and Project Minerva}\label{het}
-
-Iodine FTS validation.
-
-Telluric lines.
-
-Data reduction and IP analysis.
+We can reanalyze the $\tau$ Ceti system \citep{tuomi2013}. 
 
 \begin{comment}
 \begin{wrapfigure}{r}{0.51\textwidth}
@@ -142,7 +189,7 @@ Data reduction and IP analysis.
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-3pt}
-\section{Relevance to NASA's Objectives and Support for NASA Missions}
+\section{Relevance to NASA's Objectives and Missions}
 
 Broadly, our investigation addresses one of the science
 objectives of NASA SMD, ``Discover the origin, structure, evolution
@@ -153,29 +200,28 @@ the Astrophysics Research Program, theme (iii) Exoplanet Exploration,
 in the solicitation:
 \begin{itemize}[leftmargin=1.5em]
   \vspace{-3pt}
-	\item ``to search for planets and planetary systems about
-          nearby stars in our Galaxy": Our work with \hrs\ and
-          \minerva\ is directly aimed at searching for exoplanets
-          around nearby stars and \kepler\ targets (Section 2.1
-          and 2.2).
-          \vspace{-3pt}
-	\item ``to determine the properties of those stars that harbor
-          planetary systems": We will acquire high resolution spectra
-          on planet host stars for, e.g. the \kepler\ stars, as
-          required by the RV technique (Section 2.1). Our work on
-          maintaining EOD also provides a database that enables
-          statistical studies on stars that host exoplanets (Section
-          2.3).
-          \vspace{-3pt}
-	\item ``to determine the percentage of planets that are in or
-          near the Habitable Zone of a wide variety of stars and to
-          measure their orbits": Project \minerva\ will find more
-          Earths and super-Earths in or near the Habitable Zone of
-          nearby stars. Future work with the upgraded \hrs\ will
-          follow up potentially `rocky' \kepler\ planets in the
-          Habitable Zone to reveal the complete architecture of their
-          systems (Section 2.1 and 2.2).
-          \vspace{-3pt}
+\item ``to search for planets and planetary systems about
+  nearby stars in our Galaxy": Our work with \hrs\ and
+  \minerva\ is directly aimed at searching for exoplanets
+  around nearby stars and \kepler\ targets (Section 2.1
+  and 2.2).
+  \vspace{-3pt}
+\item ``to determine the properties of those stars that harbor
+  planetary systems": We will acquire high resolution spectra
+  on planet host stars for, e.g. the \kepler\ stars, as
+  required by the RV technique (Section 2.1). Our work on
+  maintaining EOD also provides a database that enables
+  statistical studies on stars that host exoplanets (Section
+  2.3).
+  \vspace{-3pt}
+\item ``to determine the percentage of planets that are in or near the
+  Habitable Zone of a wide variety of stars and to measure their
+  orbits": Project \minerva\ will find more Earths and super-Earths in
+  or near the Habitable Zone of nearby stars. Future work with the
+  upgraded \hrs\ will follow up potentially `rocky' \kepler\ planets
+  in the Habitable Zone to reveal the complete architecture of their
+  systems (Section 2.1 and 2.2).
+  \vspace{-3pt}
 \end{itemize}
 
 Our work will also support current and future NASA missions and
