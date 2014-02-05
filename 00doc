@@ -24,7 +24,7 @@ Overall: Our work is important and necessary for discovering low-mass exoplanets
 - How does Minerva compete with HARPS-S and HARPS-N?
 	Cadence! Minerva will be fully robotic and dedicated to do high-cadence survey.
 - Really, how many Kepler Earth-like planet candidates are there left for Keck to confirm?
-	On the order of 1000-3000 even considering magnitude limits! A lot!
+	On the order of hundreds even considering magnitude limits! A lot!
 - There are so many aspects in improving RV, is this the current bottleneck and the most important next thing to do?
 	The proposed work deals with systematic effects that have ALREADY BEEN IDENTIFIED, but just not removed! This is the natural next step! Especially we are talking about annual signal here.
 
@@ -65,6 +65,19 @@ KP<13, there are 264.
 
 elevation of McDonald Observatory = 6790 ft
 elevation of Keck Observatory = 13599 ft
+
+Kepler Validation:
+Among ~200 confirmed Kepler planets, 47 have msini measurements (K > 0; including 16 from Marcy 2013 not on exoplanets.org yet), and 18 have TTV mass estimates.
+
+CHIRON:
+http://www.ctio.noao.edu/noao/content/CHIRON
+\cite{chiron2013}:
+http://www.ctio.noao.edu/noao/sites/default/files/telescopes/smarts/tele15/chiron-PASP2013.pdf
+On tau Ceti:
+single measurement sigma = 0.82 m/s
+12 nights nightly binned sigma = 0.43 m/s
+rms of 12 nights = 0.53 m/s
+The highest precision and RV stability achieved with iodine RV work.
 
 
 ####################################################
