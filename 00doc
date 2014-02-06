@@ -89,10 +89,22 @@ The highest precision and RV stability achieved with iodine RV work.
 ####################################################
 	Proposal Summary
 ####################################################
+Please enter a brief description of the proposal that provides the following information:
 
+- A description of the key, central objectives of the proposal in terms understandable to a nonspecialist;
+- A concise statement of the methods/techniques proposed to accomplish the stated research objectives; and
+- A statement of the perceived significance of the proposed work to the objectives of the solicitation and to NASA interests and programs in general.
 
+-----------------------------------------------------
+The excellent synergy between NASA's Kepler mission and the ground-based radial velocity (RV) surveys has made numerous ground-breaking discoveries of exoplanets, including many interesting low-mass and likely rocky planets such as Kepler-78b, the first exoplanet known to have radius and mass very close to Earth's. In the post-Kepler era, radial velocimetry will undoubtedly continue to play a key role in validating Kepler candidates and measuring their masses, as well as discovering exoplanets independently. 
 
+However, the current precision of radial velocimetry (0.5-1 m/s) acts as one of the major limiting factors in detecting exoplanets with even lower masses or rocky planets further out in the orbit, especially in or near the Habitable Zone. Breaking this limit is critical for enriching the diversity of the current exoplanet ensemble towards the lower mass end, and it is an absolutely necessary step towards finding Earth-mass exoplanets in the Habitable Zone around Sun-like stars, which requires an RV precision of ~0.1 m/s.
 
+We propose to improve the RV precision of several leading RV instruments, including HIRES on Keck. Keck/HIRES has contributed to a great number of validation and mass measurements of Kepler planets - including most of the small and low-mass ones with radius smaller than 2 Earth radii. As a 10-meter-class telescope, it is responsible for a majority of the RV-discovered exoplanets so far, and it is the most efficient Kepler follow-up facility. Bringing its RV precision to a new level will most certainly bring new discoveries of exoplanets with ever lower masses. 
+
+Our work will also improve the RV precision of another 10-meter-class telescope: the Hobby-Eberly Telescope (HET). Upon finish of its hardware upgrade this summer, HET will become the second large telescope that is capable of extensive Kepler follow-up programs. Ensuring that its RV precision is comparable to that of Keck will maximize the science return on the Kepler legacy, and will also greatly benefit the current on-going RV surveys at these large telescopes. Moreover, the proposed work will have great synergy with two other precise RV instruments on smaller telescopes, CHIRON and the upcoming Minerva, which carry out dedicated, high-cadence RV survey on interesting nearby stars such as tau Ceti and alpha Centauri A/B.
+
+Our approach for improving the RV precision is to eliminate the RV systematic errors, known as one of the two major contributors to the 'RV jitters' (the other one being the stellar jitter). Through our pilot study, we have identified several contributing factors to RV systematic errors, some of which are being recognized and studied in detail for the very first time. Some of these factors contribute to the RV error budget at ~1 m/s level, and thus they set the floor of long-term RV precision at 1 m/s if not carefully studied and corrected for. We propose to work on: removal of RV systematic errors / annual jitter cause by the Earth's atmospheric absorption (telluric lines); improvements in wavelength-dependent statistical weighting in spectrum for RV extraction; validation of the RV calibrator, the iodine atlas, using high-resolution echelle spectrograph; and improvements in data reduction and instrumental effect modeling for fiber-fed RV instruments.
 
 
 

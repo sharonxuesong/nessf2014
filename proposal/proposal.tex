@@ -8,7 +8,8 @@
 %\usepackage{natbib,natbibspacing}
 \setlength{\bibsep}{3pt} % spacing for bibliography items
 \citestyle{aa} % apj type
-%\citestyle{plain} ; number style
+%\citestyle{plain} % number style
+\usepackage{multicol} % multicolumns for references
 
 % try smaller section title fonts
 \usepackage{sectsty}
@@ -89,14 +90,15 @@ promise towards the discovery of Earth analogs in the near future.
 % But... precise RV is yet to be more precise.
 In the post-\kepler\ era, radial velocimetry will undoubtedly continue
 to play a key role in validating \kepler\ candidates and measuring
-their masses, as well as detecting exoplanets independently. However,
-the current precision of radial velocimetry (0.5--1~\mps) acts as one
-of the major limiting factors in detecting lower mass
-exoplanets. Breaking this limit is critical for pushing the lower mass
-boundary of the exoplanet ensemble. It is also an absolutely
-necessary step towards finding Earth-mass ($\mearth$) exoplanets in
-the habitable zone around Sun-like stars, which requires an RV
-precision of $\sim$0.1 \mps.
+their masses, as well as discovering exoplanets
+independently. However, the current precision of radial velocimetry
+(0.5--1~\mps) acts as one of the major limiting factors in detecting
+exoplanets with even lower masses or rocky planets further out in the
+orbit, especially in or near the Habitable Zone. Breaking this limit
+is critical for pushing the lower mass boundary of the exoplanet
+ensemble. It is also an absolutely necessary step towards finding
+Earth-mass ($\mearth$) exoplanets in the Habitable Zone around
+Sun-like stars, which requires an RV precision of $\sim$0.1 \mps.
 % ZZZ add the current mass record holders 
 % ZZZ doesn't feel like a very strong `but...'; add more on necessity
 % of our work.
@@ -197,8 +199,8 @@ $\sim 0.8$~\mps.
 CHIRON has demonstrated short-term RV stability of $\sim0.5$~\mps on
 $\tau$ Ceti \citep{chiron2013}. The improvement we propose will help
 CHIRON achieve long-term RV stability below 1~\mps\ and help validate
-or characterize the potential planetary systems in $\tau$ Ceti
-\citep{tuomi2013} and $\alpha$ Centauri Bb
+or characterize the potential planetary systems around $\tau$ Ceti
+\citep{tuomi2013} and $\alpha$ Centauri B
 \citep{dumusque2012,hatzes2013}, which both have exoplanets with RV
 amplitudes on the order of $\sim 1$~\mps\ or even smaller.
 
@@ -232,22 +234,56 @@ missions (e.g., TESS; add ref).
 \vspace{-3pt}
 \section{Methodology}
 
+% overall
+Our approach for improving the RV precision is to eliminate the RV
+systematic errors, known as one of the two major contributors to the
+'RV jitters' (the other one being the stellar jitter). Through our
+pilot study, we have identified several contributing factors to RV
+systematic errors, some of which are being recognized and studied in
+detail \textit{for the very first time}. Some of these factors
+contribute to the RV error budget at $\sim 1$~\mps\ level, and thus
+they set the floor of long-term RV precision at 1~\mps\ if not
+carefully studied and corrected for.
 
-Through our pilot study, we have
-identified several contributing factors to RV systematic errors,
-some of which are being recoganized and studied in detail \textit{for the
-very first time}. These factors contribute to the RV error budget at
-$\sim$1~\mps\ level, and thus they set the floor of long-term RV
-precision at 1~\mps\ if not carefully studied and corrected for.
+%\begin{wrapfigure}{l}{0.51\textwidth}
+\begin{figure}[thb]
+  \vspace{-5pt}
+  \begin{center}
+    \includegraphics[width=\textwidth]{telluric}
+  \end{center}
+  \vspace{-25pt}  
+  \caption{Before and after making telluric lines.}
+  \vspace{-8pt}  
+  \label{tell}
+\end{figure}
+%\end{wrapfigure}
+
+% listing
+We propose to work on: removal of RV systematic errors / annual jitter
+cause by the Earth's atmospheric absorption (telluric lines;
+Section~\ref{sec:tell}); improvements in wavelength-dependent
+statistical weighting in spectrum for RV extraction
+(Section~\ref{sec:vanking}); validation of the RV calibrator, the
+iodine atlas, using high-resolution echelle spectrograph
+(Section~\ref{sec:fts}); and improvements in data reduction and
+instrumental effect modeling for fiber-fed RV instruments
+(Section~\ref{sec:ip}). 
+
+%---------------------------------------------------------------------------------------
+\vspace{-3pt}
+\subsection{Removing the Systematics Caused by Telluric
+  Lines}\label{sec:tell}
 
 
-We propose to fix the following things:
-\begin{itemize}
-  \item Telluric lines.
-  \item Wavelength-dependent statistical weighting.
-  \item Iodine FTS validation.
-  \item Data reduction and IP analysis.
-\end{itemize}
+%---------------------------------------------------------------------------------------
+\vspace{-3pt}
+\subsection{Improving Wavelength-Dependent Statistical Weighting}\label{sec:vanking}
+
+
+%---------------------------------------------------------------------------------------
+\vspace{-3pt}
+\subsection{Validating the Calibrator: the Iodine Atlas}\label{sec:fts}
+
 
 \begin{wrapfigure}{r}{0.51\textwidth}
   \vspace{-35pt}
@@ -260,17 +296,15 @@ We propose to fix the following things:
   \label{fts}
 \end{wrapfigure}
 
+%---------------------------------------------------------------------------------------
+\vspace{-3pt}
+\subsection{Improving Data Reduction and Instrument Modeling}\label{sec:ip}
 
-\begin{wrapfigure}{l}{0.51\textwidth}
-  \vspace{-35pt}
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{telluric}
-  \end{center}
-  \vspace{-25pt}  
-  \caption{Before and after making telluric lines.}
-  \vspace{-8pt}  
-  \label{tell}
-\end{wrapfigure}
+
+
+
+
+
 
 
  
@@ -324,7 +358,7 @@ for planetary atmosphere characterization.
 \vspace{-3pt}
 \section{Relation to PI's Other NASA Grants}
 
-The PI of this proposal, Prof.~Jason Wright, has received NASA Keck
+The PI of this proposal, Dr.~Jason Wright, has received NASA Keck
 time to search for long-period planet and multiple planet systems.
 The PI has also received NASA Keck time to follow up a
 \kepler\ planetary system with a strong TTV signal (Co-I Eric
@@ -339,7 +373,9 @@ follow up some if not all of the long-period planet systems and
 %\addcontentsline{toc}{section}{References}
 \vspace{-3pt}
 \bibliographystyle{apj}	% (uses file "xxx.bst")
+\begin{multicols}{2}
 {\small % smaller fonts for references
 \bibliography{references} }
+\end{multicols}
 
 \end{document}
