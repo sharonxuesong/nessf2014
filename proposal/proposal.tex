@@ -6,7 +6,7 @@
 
 \usepackage{natbib}
 %\usepackage{natbib,natbibspacing}
-\setlength{\bibsep}{3pt} % spacing for bibliography items
+\setlength{\bibsep}{2pt} % spacing for bibliography items
 \citestyle{aa} % apj type
 %\citestyle{plain} % number style
 \usepackage{multicol} % multicolumns for references
@@ -125,12 +125,12 @@ Hobby-Eberly Telescope (HET). The large collecting areas of these
 telescopes make them the ideal facilities for carrying out large and
 deep surveys around bright or faint stars, as well as for extensive
 follow-up observations on \kepler\ planet candidate systems. Our work
-will also help improving the RV precision of two
-instruments on smaller telescopes: CHIRON and the upcoming Project
-\minerva. Designed for carrying out dedicated surveys with extremely
-high RV precision, these two instruments will provide valuable high
-cadence data on nearby and bright stars, which are the best targets
-for planetary atmosphere characterization studies.
+will also help improving the RV precision of two instruments on
+smaller telescopes: CHIRON and the upcoming MINiature Exoplanet RV
+Array (\minerva). Designed for carrying out dedicated surveys with
+extremely high RV precision, these two instruments will provide
+valuable high cadence data on nearby and bright stars, which are the
+best targets for planetary atmosphere characterization studies.
 
 % Keck
 \textbf{Science with \keck: } The primary instrument we work with is
@@ -185,10 +185,9 @@ systems.
 % Minerva and CHIRON
 \textbf{MINERVA and CHIRON: } Our work also has great synergy with two
 very high RV precision instruments on smaller telescopes: the upcoming
-project \minerva\ and CHIRON on
-the 1.5m SMARTS telescope at CTIO. 
+\minerva\ and CHIRON on the 1.5m SMARTS telescope at CTIO. 
 
-Project \minerva\ consists an array of four 0.7m telescopes and a
+\minerva\ consists an array of four 0.7m telescopes and a
 vacuum-sealed highly-stable spectrograph that will perform dedicated
 RV monitoring on a carefully-selected ensemble of nearby stars. It is
 expected to discover $\gtrsim 10$ Earth- to super-Earth-size planets
@@ -284,7 +283,6 @@ contribute to the RV error budget at $\sim 1$~\mps\ level, and thus
 they set the floor of long-term RV precision at 1~\mps\ if not
 carefully studied and corrected for.
 
-%\begin{wrapfigure}{l}{0.51\textwidth}
 \begin{figure}[thb]
   \vspace{-5pt}
   \begin{center}
@@ -295,7 +293,6 @@ carefully studied and corrected for.
   \vspace{-8pt}  
   \label{fig:tell}
 \end{figure}
-%\end{wrapfigure}
 
 
 %---------------------------------------------------------------------------------------
@@ -303,10 +300,78 @@ carefully studied and corrected for.
 \subsection{Removing the Systematics Caused by Telluric
   Lines}\label{sec:tell}
 
+% telluric lines act like stellar line impostors but don't shift
+In precise iodine radial velocimetry, the measured RV is derived from
+the differential shift of stellar lines between two stellar spectral
+observations. Since all current RV instruments are ground-based, the
+stellar spectra inevitably contain telluric absorption lines as
+stellar light travels through Earth's atmosphere. These telluric lines
+are impostors of the true stellar lines, as they exist in every
+observation and are hard to identify. However, unlike the stellar
+lines, telluric lines do not have doppler shifts. This creates
+problems when one tries to measure the amount of differential line
+shift between two stellar spectra, since the `impostor stellar lines'
+do not shift between two observations while the true stellar lines
+do. As the dominant doppler shift of stellar lines is caused by the
+Earth's barycentric motion ($\sim$a few to tenth k\mps), the effect of
+telluric lines will manifest as an annual systematic signal.
 
+% before we thought it was ok, then we recognized and showed for the
+% first time that it's not
+For years, such problems caused by telluric lines are thought to be at
+a negligible level, because there are only few telluric bands within
+the working wavelength region of iodine radial velocimetry
+(5000\AA--6000\AA), and most of the telluric lines in this region are
+shallow. However, as the RV precision improves over time and
+approaching $\sim1$~\mps\ and better, the adverse effects of telluric
+lines have emerged and become one of the current bottlenecks of
+precise radial velocimetry. \textbf{This is demonstrated \textit{for
+    the first time} through our preliminary study, and with some
+  initial effort, we were able to eliminate at least some of the
+  systematic RV errors caused by telluric lines}, which is illustrated
+in Figure~\ref{fig:tell}.
+
+Figure~\ref{fig:tell} shows that the long-term ($> 5$ years) RV RMS of
+an RV standard star observed by \keck, HD 185144 ($\sigma$ Draconis),
+is reduced from 2.66~\mps\ to 2.43~\mps\ --- an RMS of 1.08~\mps\ is
+removed from the RV jitter of the star ($\sqrt{2.66^2-2.43^2}$). The
+bottom panel of Figure~\ref{fig:tell} illustrates the systematic
+errors that are being removed, which is a clear annual trend. The rest
+of the RV jitter may be due to residual telluric line effects not
+removed completely, intrinsic stellar jitter, other unknown systematic
+errors, or even low RV amplitude planets. Note that HD 185144 is the
+most stable RV standard star (with the least RV RMS) observed by Keck.
+
+% this is only the beginning - lots of improvements can be done!
+In our preliminary work, we simply `ignored' the telluric lines by
+masking them out. We gave zero statistical weights to the pixels
+associated with telluric lines when modeling the observations and
+extracting RVs. This is only the very first step, and there are many
+future improvements that will further reduce the systematics caused by
+telluric lines. For example, the mask we used was derived from naive
+atmospheric models based on the elevation of Mauna Kea with nominal
+atmospheric compositions and conditions. Another example is that the
+RV extraction code is not yet optimized to consistently produce a
+robust fit when some of the pixels are being masked out due to
+telluric lines, especially when the barycentric velocities differ a
+lot for the two stellar spectra whose RVs are being differentially
+measured. We think this might be the cause for the residual trend seen
+at large barycentric velocity ($\sim2$--4~k\mps).
+
+% also HET, MINERVA and CHIRON!
+This work will naturally improve the RV precision of \hrs\ and
+\minerva, as they share essentially the same RV extraction code with
+Keck at its core. We will also work with the CHIRON team to implement
+the treatment for telluric lines to help CHIRON achieve higher
+long-term RV precision.
+
+
+% Needs more space!
 %---------------------------------------------------------------------------------------
+\begin{comment}
 \vspace{-3pt}
 \subsection{Improving Wavelength-Dependent Statistical Weighting}\label{sec:vanking}
+\end{comment}
 
 
 %---------------------------------------------------------------------------------------
@@ -316,14 +381,15 @@ carefully studied and corrected for.
 One key element in precise RV work with iodine is the `ground truth'
 of the absorption spectrum of the iodine cell, which is normally a
 wavelength-calibrated, very high-resolution spectrum taken by a
-Fourier Transform Spectrometer (FTS). This FTS iodine atlas is used
-for modeling the iodine lines in the observed stellar$+$iodine
-spectrum to anchor the absolute wavelength solution and the `spectral
-PSF' (formally known as the spectrograph response
-function). Therefore, an accurate and precise iodine atlas is crucial
-for achieving high RV precision. \textbf{We propose to validate the
-  quality of the FTS iodine atlases for the new \hrs and \minerva, and
-  also for CHIRON and other instruments if necessary.}
+Fourier Transform Spectrometer (FTS). This FTS iodine atlas is treated
+as the `true and perfect iodine spectrum' and is used for modeling the
+iodine lines in the observed stellar$+$iodine spectrum to anchor the
+absolute wavelength solution and the `spectral PSF' (formally known as
+the spectrograph response function). Therefore, an accurate and
+precise iodine atlas is crucial for achieving high RV
+precision. \textbf{We propose to validate the quality of the FTS
+  iodine atlases for the new \hrs and \minerva, and also for CHIRON
+  and other RV instruments if necessary.}
 
 Over the years, the FTS iodine atlases are considered of very high
 quality and thus are regarded as the `ground truth' of the iodine
@@ -335,9 +401,9 @@ NIST. Comparison between this new FTS spectrum and the old one (taken
 at KPNO in 1993) reveals significant differences between the two in
 terms of wavelength solution, wavelength dispersion scale, as well as
 iodine line depths and line depth ratios. Two Doppler reductions on
-the RV standard star HD 185144 ($\sigma$ Draconis) using these two FTS
-spectra respectively yield different RV jitter: the new FTS spectrum
-reports an RV RMS of $\sim5$~\mps\ while the old FTS spectrum reports
+the RV standard star HD 185144 using these two FTS spectra
+respectively yield different RV jitter: the new FTS spectrum reports
+an RV RMS of $\sim5$~\mps\ while the old FTS spectrum reports
 $\sim4$~\mps. This calls into questions of how `true' any existing FTS
 iodine atlas really is, and demands for an independent method to
 validate the FTS spectra.
@@ -357,7 +423,7 @@ Through our pilot study, we have found a method to independently
 validate the quality of FTS iodine atlas, which is to take an
 high-resolution iodine absorption spectrum in the `real wavelength
 space' (as opposed to in Fourier space with FTS) using an echelle
-spectrograph. The echelle spectrograph which has
+spectrograph. The echelle spectrograph we used that has
 the matching spectral resolution to an FTS (at $R \sim 500,000$) is
 the TS12 arm of the Tull Spectrograph at the 2.7m Harlan J.~Smith
 telescope of McDonald Observatory. As the \hrs\ iodine cell was not
@@ -367,7 +433,7 @@ its FTS iodine atlas, which was also taken at KPNO in 1993 and thus
 can represent the quality of the KPNO FTS spectra. 
 
 Figure~\ref{fig:fts} illustrates this comparison zoomed into a 2\AA\
-chunk.  It shows that, when convolved down to resolution $R=60,000$
+chunk. It shows that, when convolved down to resolution $R=60,000$
 (typical resolution of an star$+$iodine RV observation), the
 difference between the KPNO scan and the echelle spectrum is very
 small considering photon-limited errors and potential errors in flat
@@ -375,15 +441,16 @@ fielding and scattered light removal. This demonstrates that we have
 found an independent and reliable method to validate any FTS iodine
 atlas in the future.
 
-Though the KPNO FTS spectrum has proven its quality, that particular
-FTS facility is no longer available. Recent and upcoming RV
-instruments such as the new \hrs, CHIRON, and \minerva\ will need
-validation for their FTS iodine atlases to eliminate one risk factor
-that could potentially compromise the RV precision, which is our
-proposed work here.
+Though the KPNO FTS spectrum has proven its quality, the FTS facility
+is no longer available. Recent and upcoming RV instruments such as the
+new \hrs, CHIRON, and \minerva\ will need validation for their FTS
+iodine atlases to eliminate one risk factor that could potentially
+compromise the RV precision, which is our proposed work here.
 
 
+% not a very strong section...
 %---------------------------------------------------------------------------------------
+\begin{comment}
 \vspace{-3pt}
 \subsection{Improving Data Reduction and Instrument Modeling}\label{sec:ip}
 
@@ -406,6 +473,7 @@ noise of fibers. Combined with years of engineering data and
 experience with CHIRON, improvement on IP modeling is ahead. This is
 also a natural preparation work for \minerva.
 
+\end{comment}
 
 
  
