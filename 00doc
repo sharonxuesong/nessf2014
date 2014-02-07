@@ -58,6 +58,11 @@ Ok to use the term 'post-Kepler era', but use it in a positive tune.
 First light instrument for GMT: G-CLEF for precise RV
 http://www.gmto.org/g-clef.html
 
+MINERVA = MINiature Exoplanet RV Array
+
+Keck/HIRES discovered ~>180 RV-discovered exoplanets, out of 432.
+HARPS only came online in 2002, so Keck/HIRES probably has detected the most.
+
 According to exoplanets.org, there are 1691 KOIs with
 MASS[mearth] < 4.0
 LOTS of small-mass exoplanets awaiting confirmation!
@@ -111,7 +116,7 @@ Our approach for improving the precision of iodine radial velocimetry is to elim
 ####################################################
 	Playing Perfectionism
 ####################################################
-- fig:tell: title of the third plot needs to be 'Systematics/Jitter Removed'; change barycentric correction to barycentric velocity? Or simpler, to day of year.
+- fig:tell: title of the third plot needs to be 'Systematics/Jitter Removed'; change barycentric correction to barycentric velocity? Or simpler, to day of year? If you don't plan to explain what the vertical dashed line is, remove it.
 - fig:fts: line thickness and charsizes need to match with fig:tell.
 - Section 3.3: Validating the Calibrator: the Iodine Atlas: needs to explain in first paragraph why 'calibrator'. Also trim this section down.
 - Terminologies: systematic errors, RV jitter, systematic jitter, annual jitter… be consistent and be clear!
