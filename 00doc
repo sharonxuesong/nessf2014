@@ -108,6 +108,13 @@ Our work will also improve the RV precision of another 10-meter-class telescope:
 Our approach for improving the RV precision is to eliminate the RV systematic errors, known as one of the two major contributors to the 'RV jitters' (the other one being the stellar jitter). Through our pilot study, we have identified several contributing factors to RV systematic errors, some of which are being recognized and studied in detail for the very first time. Some of these factors contribute to the RV error budget at ~1 m/s level, and thus they set the floor of long-term RV precision at 1 m/s if not carefully studied and corrected for. We propose to work on: removal of RV systematic errors / annual jitter cause by the Earth's atmospheric absorption (telluric lines); improvements in wavelength-dependent statistical weighting in spectrum for RV extraction; validation of the RV calibrator, the iodine atlas, using high-resolution echelle spectrograph; and improvements in data reduction and instrumental effect modeling for fiber-fed RV instruments.
 
 
+####################################################
+	Playing Perfectionism
+####################################################
+- fig:tell: title of the third plot needs to be 'Systematics/Jitter Removed'
+- fig:fts: line thickness and charsizes need to match with fig:tell.
+- Section 3.3: Validating the Calibrator: the Iodine Atlas: needs to explain in first paragraph why 'calibrator'.
+
 
 ####################################################
 	END OF FILE

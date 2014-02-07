@@ -50,7 +50,7 @@
 \def\leq{\leqslant}
 \def\geq{\geqslant}
 \def\kepler{{\it Kepler}}
-\def\minerva{{\it Minerva}}
+\def\minerva{MINERVA}
 \def\hrs{HET/HRS}
 \def\keck{Keck/HIRES}
 
@@ -159,13 +159,14 @@ Meanwhile, better RV precision will improve the characterization of
 multiple-planet systems, especially the ones that host challenging low
 RV amplitude planets/candidates and with potentially very active
 dynamic interactions. We plan to reanalyze the RV data and perform
-dynamic analysis on such systems, including the $\upsilon$ Andromedae
+dynamic analysis on such systems, including the GJ 876 system, which
+is the closest multi-planet systems to the Sun
+\citep{marcy2001,rivera2005,rivera2010}, the $\upsilon$ Andromedae
 system, the first multi-planet system discovered around main-sequence
 star \citep{butler1999,wright2009,curiel2011}, as well as the GJ 581
 system, which hosts the first claimed terrestrial-mass exoplanet in
 the Habitable Zone \citep{vogt2010} though under debate
 \citep[e.g.,][]{gregory2011,vogt2012,robertson2013}.
-% ZZZ also GJ 876
 
 % HET
 \textbf{Science with \hrs: } We also work with another leading RV
@@ -182,7 +183,7 @@ efficient. It will also benefit other planet search programs on
 systems.
 
 % Minerva and CHIRON
-\textbf{Minerva and CHIRON: } Our work also has great synergy with two
+\textbf{MINERVA and CHIRON: } Our work also has great synergy with two
 very high RV precision instruments on smaller telescopes: the upcoming
 project \minerva\ and CHIRON on
 the 1.5m SMARTS telescope at CTIO. 
@@ -209,7 +210,7 @@ amplitudes on the order of $\sim 1$~\mps\ or even smaller.
 %---------------------------------------------------------------------------------------
 % RECYCLE BIN
 \begin{comment}
-
+% overview
 The field of exoplanet is progressing in a fast pace towards the
 discovery of Earth-like planets around other stars. During the past
 decades, we have moved on from the age of booming discoveries of
@@ -225,6 +226,43 @@ missions (e.g., TESS; add ref).
   systematics and improved statistics.
     \vspace{-3pt}
 \end{itemize}
+
+% methodology overview
+We propose to work on: removal of RV systematic errors / annual jitter
+cause by the Earth's atmospheric absorption (telluric lines;
+Section~\ref{sec:tell}); improvements in wavelength-dependent
+statistical weighting in spectrum for RV extraction
+(Section~\ref{sec:vanking}); validation of the RV calibrator, the
+iodine atlas, using high-resolution echelle spectrograph
+(Section~\ref{sec:fts}); and improvements in data reduction and
+instrumental effect modeling for fiber-fed RV instruments
+(Section~\ref{sec:ip}). 
+
+% FTS
+When extracting RVs from the stellar spectrum obtained through an
+iodine cell, one relies on the modeling of the iodine lines using the
+`true lines' in the iodine atlas to anchor the absolute wavelength
+solution and the spectrograph response function (the `spectral PSF').
+
+Modeling the observed iodine lines using this `ground truth' iodine
+atlas anchors the absolute wavelength solution and the spectrograph
+response function (the `spectral PSF' or instrumental profile, `IP')
+when extracting RVs from the stellar spectrum.
+
+Modeling the observed Iodine lines with the FTS scan spectrum anchors
+the absolute wavelength solution and spectrograph response function
+when extracting RVs from the stellar spectrum.
+
+% an old section
+\section{Relation to PI's Other NASA Grants}
+The PI of this proposal, Dr.~Jason Wright, has received NASA Keck
+time to search for long-period planet and multiple planet systems.
+The PI has also received NASA Keck time to follow up a
+\kepler\ planetary system with a strong TTV signal (Co-I Eric
+Ford). Both of these programs will of no doubt benefit from the
+improved Keck RV precision, and the upgraded \hrs\ is expected to
+follow up some if not all of the long-period planet systems and
+\kepler\ TTV systems in the future.
 
 \end{comment}
 %---------------------------------------------------------------------------------------
@@ -250,25 +288,15 @@ carefully studied and corrected for.
 \begin{figure}[thb]
   \vspace{-5pt}
   \begin{center}
-    \includegraphics[width=\textwidth]{telluric}
+    \includegraphics[scale=0.7]{telluric}
   \end{center}
   \vspace{-25pt}  
   \caption{Before and after making telluric lines.}
   \vspace{-8pt}  
-  \label{tell}
+  \label{fig:tell}
 \end{figure}
 %\end{wrapfigure}
 
-% listing
-We propose to work on: removal of RV systematic errors / annual jitter
-cause by the Earth's atmospheric absorption (telluric lines;
-Section~\ref{sec:tell}); improvements in wavelength-dependent
-statistical weighting in spectrum for RV extraction
-(Section~\ref{sec:vanking}); validation of the RV calibrator, the
-iodine atlas, using high-resolution echelle spectrograph
-(Section~\ref{sec:fts}); and improvements in data reduction and
-instrumental effect modeling for fiber-fed RV instruments
-(Section~\ref{sec:ip}). 
 
 %---------------------------------------------------------------------------------------
 \vspace{-3pt}
@@ -285,6 +313,34 @@ instrumental effect modeling for fiber-fed RV instruments
 \vspace{-3pt}
 \subsection{Validating the Calibrator: the Iodine Atlas}\label{sec:fts}
 
+One key element in precise RV work with iodine is the `ground truth'
+of the absorption spectrum of the iodine cell, which is normally a
+wavelength-calibrated, very high-resolution spectrum taken by a
+Fourier Transform Spectrometer (FTS). This FTS iodine atlas is used
+for modeling the iodine lines in the observed stellar$+$iodine
+spectrum to anchor the absolute wavelength solution and the `spectral
+PSF' (formally known as the spectrograph response
+function). Therefore, an accurate and precise iodine atlas is crucial
+for achieving high RV precision. \textbf{We propose to validate the
+  quality of the FTS iodine atlases for the new \hrs and \minerva, and
+  also for CHIRON and other instruments if necessary.}
+
+Over the years, the FTS iodine atlases are considered of very high
+quality and thus are regarded as the `ground truth' of the iodine
+absorption spectra. However, recently we have discovered that the
+quality of an FTS spectrum is not always close to `perfect' and that
+it can affect the RV precision at a visible level. For test purposes,
+we took a newer FTS spectrum of the iodine cell of \hrs\ at
+NIST. Comparison between this new FTS spectrum and the old one (taken
+at KPNO in 1993) reveals significant differences between the two in
+terms of wavelength solution, wavelength dispersion scale, as well as
+iodine line depths and line depth ratios. Two Doppler reductions on
+the RV standard star HD 185144 ($\sigma$ Draconis) using these two FTS
+spectra respectively yield different RV jitter: the new FTS spectrum
+reports an RV RMS of $\sim5$~\mps\ while the old FTS spectrum reports
+$\sim4$~\mps. This calls into questions of how `true' any existing FTS
+iodine atlas really is, and demands for an independent method to
+validate the FTS spectra.
 
 \begin{wrapfigure}{r}{0.51\textwidth}
   \vspace{-35pt}
@@ -294,17 +350,61 @@ instrumental effect modeling for fiber-fed RV instruments
   \vspace{-25pt}  
   \caption{FTS compared with echelle spectrum.}
   \vspace{-8pt}  
-  \label{fts}
+  \label{fig:fts}
 \end{wrapfigure}
+
+Through our pilot study, we have found a method to independently
+validate the quality of FTS iodine atlas, which is to take an
+high-resolution iodine absorption spectrum in the `real wavelength
+space' (as opposed to in Fourier space with FTS) using an echelle
+spectrograph. The echelle spectrograph which has
+the matching spectral resolution to an FTS (at $R \sim 500,000$) is
+the TS12 arm of the Tull Spectrograph at the 2.7m Harlan J.~Smith
+telescope of McDonald Observatory. As the \hrs\ iodine cell was not
+available, we took a 30\AA\ chunk of echelle absorption spectrum of
+the iodine cell at the McDonald 2.1m telescope and compared it with
+its FTS iodine atlas, which was also taken at KPNO in 1993 and thus
+can represent the quality of the KPNO FTS spectra. 
+
+Figure~\ref{fig:fts} illustrates this comparison zoomed into a 2\AA\
+chunk.  It shows that, when convolved down to resolution $R=60,000$
+(typical resolution of an star$+$iodine RV observation), the
+difference between the KPNO scan and the echelle spectrum is very
+small considering photon-limited errors and potential errors in flat
+fielding and scattered light removal. This demonstrates that we have
+found an independent and reliable method to validate any FTS iodine
+atlas in the future.
+
+Though the KPNO FTS spectrum has proven its quality, that particular
+FTS facility is no longer available. Recent and upcoming RV
+instruments such as the new \hrs, CHIRON, and \minerva\ will need
+validation for their FTS iodine atlases to eliminate one risk factor
+that could potentially compromise the RV precision, which is our
+proposed work here.
+
 
 %---------------------------------------------------------------------------------------
 \vspace{-3pt}
 \subsection{Improving Data Reduction and Instrument Modeling}\label{sec:ip}
 
+This part is for improving RV of fiber-fed spectrographs: \hrs,
+\minerva, and CHIRON.
 
+The new \hrs\ is going to have a different spectral format, which is
+very similar to what \minerva\ will have. We need to modify the data
+reduction and doppler code for \hrs\ to adapt to it to ensure it
+reaches the optimized precision. This will naturally also be
+preparation work for \minerva. Addressing the challenge of flat
+fielding for such spectral format will also help improve CHIRON.
 
-
-
+Another crucial work is to model the instrumental profile of fiber-fed
+spectrograph really well and to understand the problems that are
+unique for fibers. IP is very important and \hrs\ is not doing very
+well. We have acquired lots of engineering data on
+\hrs\ to specially designed for modeling IPs and understanding modal
+noise of fibers. Combined with years of engineering data and
+experience with CHIRON, improvement on IP modeling is ahead. This is
+also a natural preparation work for \minerva.
 
 
 
@@ -355,28 +455,15 @@ super-Earth-like exoplanets, which are the primary targets for JWST
 for planetary atmosphere characterization.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-3pt}
-\section{Relation to PI's Other NASA Grants}
-
-The PI of this proposal, Dr.~Jason Wright, has received NASA Keck
-time to search for long-period planet and multiple planet systems.
-The PI has also received NASA Keck time to follow up a
-\kepler\ planetary system with a strong TTV signal (Co-I Eric
-Ford). Both of these programs will of no doubt benefit from the
-improved Keck RV precision, and the upgraded \hrs\ is expected to
-follow up some if not all of the long-period planet systems and
-\kepler\ TTV systems in the future.
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\newpage
 %\addcontentsline{toc}{section}{References}
 \vspace{-3pt}
 \bibliographystyle{apj}	% (uses file "xxx.bst")
-\begin{multicols}{2}
+%\begin{multicols}{2}
 {\small % smaller fonts for references
 \bibliography{references} }
-\end{multicols}
+%\end{multicols}
 
 \end{document}
