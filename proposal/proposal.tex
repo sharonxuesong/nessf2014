@@ -202,126 +202,6 @@ or characterize the potential planetary systems around $\tau$ Ceti
 amplitudes on the order of $\sim 1$~\mps\ or even smaller.
 
 
-%---------------------------------------------------------------------------------------
-% RECYCLE BIN
-\begin{comment}
-% overview
-The excellent synergy between NASA's \kepler\ mission and the
-ground-based radial velocity (RV) surveys has made numerous
-ground-breaking discoveries of exoplanets, including many interesting
-low-mass and rocky planets
-\citep[e.g.,][]{howard2013,pepe2013,marcy2014}. This has brought the
-field of exoplanets into an exciting era with an inceasing sample of
-small and potentially rocky planets \citep{weiss2013} with the great
-promise towards the discovery of Earth analogs in the near future.
-
-In the post-\kepler\ era, radial velocimetry will undoubtedly continue
-to play a key role in validating \kepler\ candidates and measuring
-their masses, as well as discovering exoplanets
-independently. However, the current precision of radial velocimetry
-(0.5--1~\mps) acts as one of the major limiting factors in detecting
-exoplanets with even lower masses or rocky planets further out in the
-orbit, especially in or near the Habitable Zone. Breaking this limit
-is critical for pushing the lower mass boundary of the exoplanet
-ensemble. It is also an absolutely necessary step towards finding
-Earth-mass ($\mearth$) exoplanets in the Habitable Zone around
-Sun-like stars, which requires an RV precision of $\sim$0.1 \mps.
-  
-The field of exoplanet is progressing in a fast pace towards the
-discovery of Earth-like planets around other stars. During the past
-decades, we have moved on from the age of booming discoveries of
-Jupiter-mass exoplanets via radial velocimetry (add ref) to the
-\kepler\ era where there are thousands of Earth- and super-Earth-size
-exoplanet candidates (add ref). Moreover, great promises lie ahead with
-future ground-based instruments (e.g., ESPRESSO; add ref) or space
-missions (e.g., TESS; add ref).
-
-\begin{itemize}[leftmargin=2.2em]
-    \vspace{-3pt}
-\item Improve the RV precision of Keck through eliminating known
-  systematics and improved statistics.
-    \vspace{-3pt}
-\end{itemize}
-
-% methodology overview
-We propose to work on: removal of RV systematic errors / annual jitter
-cause by the Earth's atmospheric absorption (telluric lines;
-Section~\ref{sec:tell}); improvements in wavelength-dependent
-statistical weighting in spectrum for RV extraction
-(Section~\ref{sec:vanking}); validation of the RV calibrator, the
-iodine atlas, using high-resolution echelle spectrograph
-(Section~\ref{sec:fts}); and improvements in data reduction and
-instrumental effect modeling for fiber-fed RV instruments
-(Section~\ref{sec:ip}). 
-
-% FTS
-We took a 30\AA\ chunk of echelle absorption spectrum of
-the iodine cell at the McDonald 2.1m telescope and compared it with
-its FTS iodine atlas (also taken at KPNO in 1993 and thus can
-represent the quality of the KPNO FTS spectra).
-
-One key element in precise RV work with iodine is the ``ground truth"
-of the absorption spectrum of the iodine cell, which is normally a
-wavelength-calibrated, very high-resolution iodine atlas taken by a
-Fourier Transform Spectrometer (FTS). Treated as the ``true and perfect
-iodine spectrum", the FTS iodine atlas is used for modeling the iodine
-lines in the observed stellar$+$iodine spectrum to anchor the absolute
-wavelength solution and the spectrograph response function. Therefore,
-an accurate and precise iodine atlas is crucial for achieving high RV
-precision.
-
-When extracting RVs from the stellar spectrum obtained through an
-iodine cell, one relies on the modeling of the iodine lines using the
-``true lines" in the iodine atlas to anchor the absolute wavelength
-solution and the spectrograph response function (the ``spectral PSF").
-
-Modeling the observed iodine lines using this ``ground truth" iodine
-atlas anchors the absolute wavelength solution and the spectrograph
-response function (the `spectral PSF' or instrumental profile, `IP')
-when extracting RVs from the stellar spectrum.
-
-Modeling the observed Iodine lines with the FTS scan spectrum anchors
-the absolute wavelength solution and spectrograph response function
-when extracting RVs from the stellar spectrum.
-
-% an old section
-\section{Relation to PI's Other NASA Grants}
-The PI of this proposal, Dr.~Jason Wright, has received NASA Keck
-time to search for long-period planet and multiple planet systems.
-The PI has also received NASA Keck time to follow up a
-\kepler\ planetary system with a strong TTV signal (Co-I Eric
-Ford). Both of these programs will of no doubt benefit from the
-improved Keck RV precision, and the upgraded \hrs\ is expected to
-follow up some if not all of the long-period planet systems and
-\kepler\ TTV systems in the future.
-
-% itemized relevance to NASA
-\begin{itemize}[leftmargin=1.5em]
-  \vspace{-8pt}
-\item ``to search for planets and planetary systems about
-  nearby stars in our Galaxy": This is the direct science goal of our
-  work. 
-  \vspace{-5pt}
-\item ``to determine the properties of those stars that harbor
-  planetary systems": We will acquire high resolution spectra on
-  planet host stars with \keck\ and \hrs\ for, e.g. the
-  \kepler\ stars, as required by the RV technique. Improved RV
-  precision will also help better understanding stellar activities and
-  stellar RV jitter.
-  \vspace{-5pt}
-\item ``to determine the percentage of planets that are in or near the
-  Habitable Zone of a wide variety of stars and to measure their
-  orbits": Improved RV precision of \keck\ and \hrs\ will enable more
-  detections of potentially rocky exoplanets in the Habitable Zone of
-  their host stars, which is also the immediate goal of project \minerva.
-  \vspace{-8pt}
-\end{itemize}
-
-\end{comment}
-%---------------------------------------------------------------------------------------
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-3pt}
 \section{Methodology}
@@ -366,7 +246,8 @@ emerged and become one of the current bottlenecks of precise radial
 velocimetry. \textbf{This is demonstrated \textit{for the first time}
   through our preliminary study, and with some initial effort in
   telluric line masking, we were able to eliminate a visible amount of
-  the systematic RV errors}, which is illustrated in Figure~\ref{fig:tell}.
+  the systematic RV errors}, which is illustrated in
+Figure~\ref{fig:tell}.
 
 \begin{figure}[thb]
   \vspace{-5pt}
@@ -420,7 +301,7 @@ long-term RV precision.
 
 %---------------------------------------------------------------------------------------
 \vspace{-3pt}
-\subsection{Improving Wavelength-Dependent Statistical Weights}\label{sec:vank}
+\subsection{Improving the Wavelength-Dependent Statistical Weighting}\label{sec:vank}
 
 
 \begin{wrapfigure}{r}{0.5\textwidth}
@@ -437,16 +318,30 @@ long-term RV precision.
 % what is weighting and its importance
 The application of wavelength-dependent statistical weights is the
 ``secret sauce" of precise iodine radial velocimetry. It evaluates the
-RV performance of each wavelength region across observations and
-assigns them statistical weights before computing the final mean
-RV. It also adjusts for the wavelength-dependent systematic offsets
-and rejects outlier regions with poor RV RMS
+RV performance of each wavelength region (an ``RV chunk") across
+observations and assigns them statistical weights before computing the
+final mean RV. It also adjusts for the wavelength-dependent systematic
+offsets and rejects outlier chunks with poor RV RMS
 performance. Figure~\ref{fig:vank} illustrates the crucial role of
 this weighting scheme in precise RV.
 
-% what we have learned and plan to do
+% what's 'wrong' with it
+Through our preliminary work with telluric lines, we discovered that
+the weighting procedure does not give proper treatment to the
+telluric-contaminated chunks. It does not incorporate any prior
+knowledge on the intrinsic quality of chunks, and consequently, the
+telluric-contaminated ones tend to be either brutally rejected or
+taken in equally as other clean chunks.
 
-
+% what we plan to do
+\textbf{We propose to improve the statistical weighting by
+  incorporating prior knowledge on the intrinsic quality of different
+  wavelength regions.} Our work will actually go beyond proper
+treatment for the telluric regions: the current weighting procedure is
+purely a post-RV-reduction outlier rejection process, and we will
+increase its power by exploiting more prior knowledge on each chunk,
+such as the amount of Doppler information content, the signal-to-noise
+ratio, and instrumental effects.
 
 
 %---------------------------------------------------------------------------------------
@@ -463,25 +358,25 @@ the quality of FTS iodine atlases.
 
 We took a new FTS atlas of the \hrs\ iodine cell at NIST and compared
 it with the old one (taken at KPNO in 1993), which showed that they
-differ significantly in terms of wavelength solution, wavelength
-dispersion scale, iodine line depths, and line depth ratios. Doppler
-reductions on the RV standard star HD 185144 yield a RV jitter of
-$\sim5$~\mps\ when using the new FTS atlas and $\sim4$~\mps\ with the
-old one. This calls into questions of how ``true" any existing FTS
-iodine atlas really is, and demands for an independent method to
-validate them. \textbf{We propose to validate the quality of the FTS
-  iodine atlases for the new \hrs\ and \minerva, and also for CHIRON
-  and other RV instruments if necessary.}
+differ significantly in terms of wavelength scales and line
+shapes. The RV jitter of the RV standard star HD 185144 (observed with
+\hrs) is $\sim5$~\mps\ when we use the new FTS atlas
+vs.~$\sim4$~\mps\ with the old one. This calls into questions of how
+``true" any existing FTS iodine atlas really is, and demands for an
+independent method to validate them. \textbf{We propose to validate
+  the quality of the FTS iodine atlases for the new \hrs\ and
+  \minerva, and also for CHIRON and other RV instruments if
+  necessary.}
 
 We have found a method to independently validate the quality of FTS
-iodine atlas, which is to take a high-resolution iodine absorption
-spectrum in the ``real wavelength space" (as opposed to in Fourier
-space with FTS) using an echelle spectrograph. We used the TS12 arm of
-the Tull Spectrograph at the McDonald Observatory 2.7m telescope,
-which has the matching spectral resolution to an FTS ($R \sim
-500,000$). For our pilot study, we used the iodine cell at the
-McDonald 2.1m telescope, whoese FTS atlas was also taken at KPNO in
-1993 and thus can represent the quality of the KPNO FTS atlases.
+iodine atlas, which is to take a high-resolution echelle spectrum of
+the iodine cell in the ``real wavelength space" (as opposed to in
+Fourier space with FTS). We used the TS12 arm of the Tull Spectrograph
+at the McDonald Observatory 2.7m telescope, which has the matching
+spectral resolution to an FTS ($R \sim 500,000$). For our pilot study,
+we used the iodine cell at the McDonald 2.1m telescope, whoese FTS
+atlas was also taken at KPNO in 1993 and thus can represent the
+quality of the KPNO FTS atlases.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
   \vspace{-35pt}
@@ -586,5 +481,127 @@ atmosphere characterization.
 %{\footnotesize
 \bibliography{references} }
 %\end{multicols}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RECYCLE BIN
+\begin{comment}
+% overview
+The excellent synergy between NASA's \kepler\ mission and the
+ground-based radial velocity (RV) surveys has made numerous
+ground-breaking discoveries of exoplanets, including many interesting
+low-mass and rocky planets
+\citep[e.g.,][]{howard2013,pepe2013,marcy2014}. This has brought the
+field of exoplanets into an exciting era with an inceasing sample of
+small and potentially rocky planets \citep{weiss2013} with the great
+promise towards the discovery of Earth analogs in the near future.
+
+In the post-\kepler\ era, radial velocimetry will undoubtedly continue
+to play a key role in validating \kepler\ candidates and measuring
+their masses, as well as discovering exoplanets
+independently. However, the current precision of radial velocimetry
+(0.5--1~\mps) acts as one of the major limiting factors in detecting
+exoplanets with even lower masses or rocky planets further out in the
+orbit, especially in or near the Habitable Zone. Breaking this limit
+is critical for pushing the lower mass boundary of the exoplanet
+ensemble. It is also an absolutely necessary step towards finding
+Earth-mass ($\mearth$) exoplanets in the Habitable Zone around
+Sun-like stars, which requires an RV precision of $\sim$0.1 \mps.
+  
+The field of exoplanet is progressing in a fast pace towards the
+discovery of Earth-like planets around other stars. During the past
+decades, we have moved on from the age of booming discoveries of
+Jupiter-mass exoplanets via radial velocimetry (add ref) to the
+\kepler\ era where there are thousands of Earth- and super-Earth-size
+exoplanet candidates (add ref). Moreover, great promises lie ahead with
+future ground-based instruments (e.g., ESPRESSO; add ref) or space
+missions (e.g., TESS; add ref).
+
+\begin{itemize}[leftmargin=2.2em]
+    \vspace{-3pt}
+\item Improve the RV precision of Keck through eliminating known
+  systematics and improved statistics.
+    \vspace{-3pt}
+\end{itemize}
+
+% methodology overview
+We propose to work on: removal of RV systematic errors / annual jitter
+cause by the Earth's atmospheric absorption (telluric lines;
+Section~\ref{sec:tell}); improvements in wavelength-dependent
+statistical weighting in spectrum for RV extraction
+(Section~\ref{sec:vanking}); validation of the RV calibrator, the
+iodine atlas, using high-resolution echelle spectrograph
+(Section~\ref{sec:fts}); and improvements in data reduction and
+instrumental effect modeling for fiber-fed RV instruments
+(Section~\ref{sec:ip}). 
+
+% FTS
+Doppler reductions on the RV standard star HD 185144 yield a
+RV jitter of $\sim5$~\mps\ when using the new FTS atlas and
+$\sim4$~\mps\ with the old one.
+
+We took a 30\AA\ chunk of echelle absorption spectrum of
+the iodine cell at the McDonald 2.1m telescope and compared it with
+its FTS iodine atlas (also taken at KPNO in 1993 and thus can
+represent the quality of the KPNO FTS spectra).
+
+One key element in precise RV work with iodine is the ``ground truth"
+of the absorption spectrum of the iodine cell, which is normally a
+wavelength-calibrated, very high-resolution iodine atlas taken by a
+Fourier Transform Spectrometer (FTS). Treated as the ``true and perfect
+iodine spectrum", the FTS iodine atlas is used for modeling the iodine
+lines in the observed stellar$+$iodine spectrum to anchor the absolute
+wavelength solution and the spectrograph response function. Therefore,
+an accurate and precise iodine atlas is crucial for achieving high RV
+precision.
+
+When extracting RVs from the stellar spectrum obtained through an
+iodine cell, one relies on the modeling of the iodine lines using the
+``true lines" in the iodine atlas to anchor the absolute wavelength
+solution and the spectrograph response function (the ``spectral PSF").
+
+Modeling the observed iodine lines using this ``ground truth" iodine
+atlas anchors the absolute wavelength solution and the spectrograph
+response function (the `spectral PSF' or instrumental profile, `IP')
+when extracting RVs from the stellar spectrum.
+
+Modeling the observed Iodine lines with the FTS scan spectrum anchors
+the absolute wavelength solution and spectrograph response function
+when extracting RVs from the stellar spectrum.
+
+% an old section
+\section{Relation to PI's Other NASA Grants}
+The PI of this proposal, Dr.~Jason Wright, has received NASA Keck
+time to search for long-period planet and multiple planet systems.
+The PI has also received NASA Keck time to follow up a
+\kepler\ planetary system with a strong TTV signal (Co-I Eric
+Ford). Both of these programs will of no doubt benefit from the
+improved Keck RV precision, and the upgraded \hrs\ is expected to
+follow up some if not all of the long-period planet systems and
+\kepler\ TTV systems in the future.
+
+% itemized relevance to NASA
+\begin{itemize}[leftmargin=1.5em]
+  \vspace{-8pt}
+\item ``to search for planets and planetary systems about
+  nearby stars in our Galaxy": This is the direct science goal of our
+  work. 
+  \vspace{-5pt}
+\item ``to determine the properties of those stars that harbor
+  planetary systems": We will acquire high resolution spectra on
+  planet host stars with \keck\ and \hrs\ for, e.g. the
+  \kepler\ stars, as required by the RV technique. Improved RV
+  precision will also help better understanding stellar activities and
+  stellar RV jitter.
+  \vspace{-5pt}
+\item ``to determine the percentage of planets that are in or near the
+  Habitable Zone of a wide variety of stars and to measure their
+  orbits": Improved RV precision of \keck\ and \hrs\ will enable more
+  detections of potentially rocky exoplanets in the Habitable Zone of
+  their host stars, which is also the immediate goal of project \minerva.
+  \vspace{-8pt}
+\end{itemize}
+
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
