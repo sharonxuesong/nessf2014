@@ -301,10 +301,10 @@ long-term RV precision.
 \subsection{Improving the Wavelength-Dependent Statistical Weighting}\label{sec:vank}
 \vspace{-5pt}
 
-\begin{wrapfigure}{r}{0.48\textwidth}
+\begin{wrapfigure}{r}{0.45\textwidth}
   \vspace{-25pt}
   \begin{center}
-    \includegraphics[width=0.45\textwidth]{vank}
+    \includegraphics[width=0.42\textwidth]{vank}
   \end{center}
   \vspace{-25pt}  
   \caption{RV RMS of HD 185144 before (gray) and after (black) weighting.} 
@@ -410,50 +410,24 @@ proposed work here.
 
 We propose to improve the data reduction pipeline of \hrs\ in
 preparation for its upgrade (schedule to finish in 2014 summer) and
-also for the upcoming \minerva. The new \hrs\ will have a factor of
-$\sim$5 improvement in throughput, with a new spectral format that is
-similar to CHIRON and \minerva's. We have also acquired on-sky and
-engineering test data in order to address the issue of modeling this
-fiber-fed spectrograph. Since we have set up the data reduction and
-Doppler pipeline for the current \hrs\ \citep{wang2012}, we are
-confident about upgrading the pipeline for the new \hrs\ with the aim
-to achieve $\sim$1~\mps\ precision.
+also for the upcoming \minerva. The new \hrs\ will have a new spectral
+format that is similar to CHIRON and \minerva's. This new format will
+have four parallel images for each echelle order due to the
+implementation of an image slicer, and this poses a challenge to data
+reduction, especially for flat fielding. With our experience of
+setting up data reduction pipeline for the current
+\hrs\ \citep{wang2012} and our close collaboration with the CHIRON
+group, we are confident about upgrading the code for the new \hrs\ and
+\minerva\ to ensure the delivery of high RV precision.
 
-
-\begin{comment}
-The main objective of this proposal is to develop data reduction and
-RV extraction pipelines for HET/HRS and Minerva. The similarity
-between the spectral data products of the upgraded HET/HRS and Minerva
-provides us the opportunity to construct a single pipeline that will
-work equally well for both. The RV precision of the current HET/HRS is
-3-5 m/s, and we plan to improve it towards 1m/s through a better
-understanding of the spectrograph, a better modeling of the
-instrumental profile and so on. Such an improvement will enable more
-discoveries of long-period planet with HRS archival RV data spanning
-~10 years, and it will also prepare us to bring the upgraded HET/HRS
-to ~1 m/s precision or even better as it takes in new optical parts
-and arrangements and adopts a new spectral data format. 
-
-This part is for improving RV of fiber-fed spectrographs: \hrs,
-\minerva, and CHIRON.
-
-The new \hrs\ is going to have a different spectral format, which is
-very similar to what \minerva\ will have. We need to modify the data
-reduction and doppler code for \hrs\ to adapt to it to ensure it
-reaches the optimized precision. This will naturally also be
-preparation work for \minerva. Addressing the challenge of flat
-fielding for such spectral format will also help improve CHIRON.
-
-Another crucial work is to model the instrumental profile of fiber-fed
-spectrograph really well and to understand the problems that are
-unique for fibers. IP is very important and \hrs\ is not doing very
-well. We have acquired lots of engineering data on
-\hrs\ to specially designed for modeling IPs and understanding modal
-noise of fibers. Combined with years of engineering data and
-experience with CHIRON, improvement on IP modeling is ahead. This is
-also a natural preparation work for \minerva.
-
-\end{comment}
+Another factor that is limiting the current precision of \hrs\ is the
+modeling of the spectrograph response function (SRF). This is not an
+issue for \keck, since the SRF of HIRES has been studied in detail and
+modeled successfully. However, for the fiber-fed \hrs\ and \minerva,
+the SRF will be significantly different and require more careful study
+on fiber spectroscopy. We have acquired on-sky and engineering test
+data with \hrs\ designed to address this issue, as well as the issue of
+modal noise, which is also unique to fiber-fed spectrographs.
 
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
