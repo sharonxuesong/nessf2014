@@ -88,28 +88,39 @@ candidates and measuring their masses, as well as discovering
 exoplanets independently.
 
 % But... precise RV is yet to be more precise.
-However, the current precision of radial velocimetry (0.5--1~\mps)
-acts as one of the major limiting factors in detecting exoplanets with
-even lower masses or rocky planets further out in the orbit,
-especially in or near the Habitable Zone. Breaking this limit is
-critical for enriching the diversity of the current exoplanet ensemble
-towards the lower mass end, and it is a necessary step towards finding
-Earth-mass exoplanets in the Habitable Zone around Sun-like stars,
-which requires an RV precision of $\sim$0.1~\mps.
-% ZZZ add number of kepler candidates with mass measurements with RV
-% ZZZ add the current mass record holders 
-% ZZZ doesn't feel like a very strong `but...'; add more on necessity
-% of our work.
+However, the current precision of radial velocimetry ($\gtrsim
+0.5$--1~\mps \footnote{The photon-limited precision of the leading RV
+  instruments (HARPS and Keck) is $\sim$0.5--1~\mps\ for bright stars,
+  while in reality, there is almost always some extra error, i.e.~the
+  ``RV jitter", comprised of systematic errors and unaccounted
+  stellar-activity signals. For example, the RMS of RV residuals
+  against best-fit model for the Kepler-78b system is $\sim 2.5$~\mps,
+  with an RV jitter of $\sim 2.1$~\mps, while the photon-limited error
+  for the star is $<2$~\mps\ \citep{howard2013,pepe2013}.}) is
+limiting our ability to detect exoplanets with even lower masses or
+rocky planets further out in the orbit, especially in or near the
+Habitable Zone. Breaking this limit is critical for enriching the
+diversity of the exoplanet ensemble towards the lower mass end, and it
+is a necessary step towards finding Earth-mass exoplanets in the
+Habitable Zone around Sun-like stars, which requires an RV precision
+of $\sim$0.1~\mps.
 
 % What we propose to do
 \textbf{We propose to improve the RV precision of several leading RV
-  instruments through correction of systematic errors, with the aim to
-  find the lowest mass exoplanets.} Improved radial velocimetry will
-also enable better characterization of the current known low RV
-amplitude planetary systems. Moreover, eliminating instrumental
-systematic errors will help in isolating the RV signals induced by
-stellar activities and promote a better understanding of the stellar
-RV jitter, which is also crucial for finding lower mass exoplanets.
+  instruments by eliminating $>1$~\mps\ of systematic errors, with the
+  aim to find the lowest mass exoplanets.}
+
+We will improve the RV precision of the two leading RV instruments on
+two 10-meter-class telescopes: Keck and the Hobby-Eberly Telescope
+(HET). With their large collecting areas, Keck and HET are the leading
+facilities for extensive \kepler\ follow-up observations as well as
+independent large and deep RV surveys. Our work will also improve the
+RV precision of two instruments on small telescopes: CHIRON and the
+upcoming MINiature Exoplanet RV Array (\minerva). Designed for
+carrying out dedicated surveys with extremely high RV precision, they
+will provide valuable high cadence data on nearby and bright stars,
+which are the best targets for planetary atmosphere characterization
+studies.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -117,18 +128,6 @@ RV jitter, which is also crucial for finding lower mass exoplanets.
 \section{Expected Scientific Outcome and Impact}
 
 % overall
-Our work will directly improve the RV precision of the two leading RV
-instruments on two 10-meter-class telescopes: Keck and the
-Hobby-Eberly Telescope (HET). The large collecting areas of these
-telescopes make them the ideal facilities for carrying out large and
-deep surveys around bright or faint stars, as well as for extensive
-follow-up observations on \kepler\ planet candidate systems. Our work
-will also improve the RV precision of two instruments on
-smaller telescopes: CHIRON and the upcoming MINiature Exoplanet RV
-Array (\minerva). Designed for carrying out dedicated surveys with
-extremely high RV precision, these two instruments will provide
-valuable high cadence data on nearby and bright stars, which are the
-best targets for planetary atmosphere characterization studies.
 
 % Keck
 \textbf{Science with \keck: } The primary instrument we work with is
@@ -323,7 +322,7 @@ observations and assigns them statistical weights before computing the
 final mean RV. It also adjusts for the wavelength-dependent systematic
 offsets and rejects outlier chunks with poor RV RMS
 performance. Figure~\ref{fig:vank} illustrates the crucial role of
-this weighting scheme in precise RV.
+this weighting scheme in precise radial velocimetry.
 
 % what's 'wrong' with it
 Through our preliminary work with telluric lines, we discovered that
@@ -331,12 +330,12 @@ the weighting procedure does not give proper treatment to the
 telluric-contaminated chunks. It does not incorporate any prior
 knowledge on the intrinsic quality of chunks, and consequently, the
 telluric-contaminated ones tend to be either brutally rejected or
-taken in equally as other clean chunks.
+taken in almost equally as the clean chunks.
 
 % what we plan to do
 \textbf{We propose to improve the statistical weighting by
   incorporating prior knowledge on the intrinsic quality of different
-  wavelength regions.} Our work will actually go beyond proper
+  wavelength regions.} Our work will extend beyond implementing proper
 treatment for the telluric regions: the current weighting procedure is
 purely a post-RV-reduction outlier rejection process, and we will
 increase its power by exploiting more prior knowledge on each chunk,
@@ -486,6 +485,15 @@ atmosphere characterization.
 % RECYCLE BIN
 \begin{comment}
 % overview
+\textbf{We propose to improve the RV precision of several leading RV
+  instruments through correction of systematic errors, with the aim to
+  find the lowest mass exoplanets.} Improved radial velocimetry will
+also enable better characterization of the current known low RV
+amplitude planetary systems. Moreover, eliminating instrumental
+systematic errors will help in isolating the RV signals induced by
+stellar activities and promote a better understanding of the stellar
+RV jitter, which is also crucial for finding lower mass exoplanets.
+  
 The excellent synergy between NASA's \kepler\ mission and the
 ground-based radial velocity (RV) surveys has made numerous
 ground-breaking discoveries of exoplanets, including many interesting
