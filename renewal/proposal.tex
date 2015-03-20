@@ -1,4 +1,6 @@
-% NESSF 2014 proposal
+% NESSF 2015 renewal attempt...
+% The deadline was Mar 16 Mon 2015, but didn't notice until Mar 19
+% Fri! Ack!
 
 \documentclass[12pt]{article}
 
@@ -67,16 +69,92 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % title
 \title{\vspace{-45pt} \bf \Large Finding the Lowest Mass Exoplanets with
-  \\ Improved Radial Velocimetry \vspace{-15pt}}
+  \\ Improved Radial Velocimetry: Progress Report 2015 \vspace{-15pt}}
 \author{\normalsize Sharon Xuesong Wang}
 \date{}
 \maketitle
 
+% renewal progress report requirements
+\begin{comment}
+  which summarizes the work accomplished during the
+previous year, relating the actual accomplishments with the plan originally
+outlined in the proposal and/or including any unanticipated opportunities,
+surprises, or unusual developments; and a description of plans for the coming
+year, including explanations of any substantial deviation from the plan originally
+outlined in the proposal.
+\end{comment}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-48pt}
-\section{Overview}
+\section{Summary of Program and Orignal Plans}
 \vspace{-5pt}
 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-48pt}
+\section{Progress}
+\vspace{-5pt}
+
+
+%---------------------------------------------------------------------------------------
+\vspace{-10pt}
+\subsection{Removing the Systematics Caused by Telluric
+  Lines}\label{sec:tell}
+\vspace{-5pt}
+
+\begin{figure}[thb]
+  \vspace{-3pt}
+  \begin{center}
+%    \includegraphics[scale=0.6]{telluric}
+    \includegraphics[width=0.32\textwidth]{185144_RV_BC_rj172}
+    \includegraphics[width=0.32\textwidth]{185144_RV_BC_rj172.tell_dsst_ftsh2o150.eps}
+%    \includegraphics[width=0.32\textwidth]{185144_RV_BC_diff_rj172_10}
+    \includegraphics[width=0.32\textwidth]{185144_RV_BC_diff_rj172}        
+  \end{center}
+  \vspace{-25pt}  
+  \caption{Measured precise radial velocities of a standard star
+    observed with \keck\ as a function of barycentric correction
+    (i.e.~Earth's radial velocity away from the target). Our
+    preliminary treatment of telluric lines has removed over
+    1~\mps\ systematic noise (panel 3; note the change in scale on
+    y-axis).} 
+  \vspace{-8pt}  
+  \label{fig:tell}
+\end{figure}
+
+
+%---------------------------------------------------------------------------------------
+\vspace{-10pt}
+\subsection{Validating the Calibrator: the Iodine Atlas}\label{sec:fts}
+\vspace{-5pt}
+
+
+%---------------------------------------------------------------------------------------
+\vspace{-10pt}
+\subsection{Improving Data Reduction and Instrument Modeling}\label{sec:ip}
+\vspace{-5pt}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-48pt}
+\section{Future Plans}
+\vspace{-5pt}
+
+
+%---------------------------------------------------------------------------------------
+\vspace{-10pt}
+\subsection{Improving the Wavelength-Dependent Statistical Weighting}\label{sec:vank}
+\vspace{-5pt}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% old proposal
+\begin{comment}
 % An overview of awesomeness of finding low-mass exoplanets.
 The great synergy between NASA's \kepler\ mission and the ground-based
 radial velocity (RV) surveys has made ground-breaking discoveries of
@@ -483,182 +561,9 @@ super Earths and Earth analogs, which are the primary targets for
 %{\footnotesize
 \bibliography{references} }
 %\end{multicols}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% RECYCLE BIN
-\begin{comment}
-% overview
-\textbf{We propose to improve the RV precision of several leading RV
-  instruments through correction of systematic errors, with the aim to
-  find the lowest mass exoplanets.} Improved radial velocimetry will
-also enable better characterization of the currently known low RV
-amplitude planetary systems. Moreover, eliminating instrumental
-systematic errors will help in isolating the RV signals induced by
-stellar activities and promote a better understanding of the stellar
-RV jitter, which is also crucial for finding lower mass exoplanets.
-  
-The excellent synergy between NASA's \kepler\ mission and the
-ground-based radial velocity (RV) surveys has made numerous
-ground-breaking discoveries of exoplanets, including many interesting
-low-mass and rocky planets
-\citep[e.g.,][]{howard2013,pepe2013,marcy2014}. This has brought the
-field of exoplanets into an exciting era with an inceasing sample of
-small and potentially rocky planets \citep{weiss2013} with the great
-promise towards the discovery of Earth analogs in the near future.
-
-In the post-\kepler\ era, radial velocimetry will undoubtedly continue
-to play a key role in validating \kepler\ candidates and measuring
-their masses, as well as discovering exoplanets
-independently. However, the current precision of radial velocimetry
-(0.5--1~\mps) acts as one of the major limiting factors in detecting
-exoplanets with even lower masses or rocky planets further out in the
-orbit, especially in or near the Habitable Zone. Breaking this limit
-is critical for pushing the lower mass boundary of the exoplanet
-ensemble. It is also an absolutely necessary step towards finding
-Earth-mass ($\mearth$) exoplanets in the Habitable Zone around
-Sun-like stars, which requires an RV precision of $\sim$0.1 \mps.
-  
-The field of exoplanet is progressing in a fast pace towards the
-discovery of Earth-like planets around other stars. During the past
-decades, we have moved on from the age of booming discoveries of
-Jupiter-mass exoplanets via radial velocimetry (add ref) to the
-\kepler\ era where there are thousands of Earth- and super-Earth-size
-exoplanet candidates (add ref). Moreover, great promises lie ahead with
-future ground-based instruments (e.g., ESPRESSO; add ref) or space
-missions (e.g., TESS; add ref).
-
-% science
-Our work also has great synergy with two
-very high RV precision instruments on smaller telescopes: the upcoming
-\minerva\ and CHIRON on the 1.5m SMARTS telescope at CTIO. 
-
-is limiting its ability to detect lower mass
-planets or planets with the same mass but further out in orbit
-\citep[e.g.,][]{marcy2014}.
-
-% example of listed item
-\begin{itemize}[leftmargin=2.2em]
-    \vspace{-3pt}
-\item Improve the RV precision of Keck through eliminating known
-  systematics and improved statistics.
-    \vspace{-3pt}
-\end{itemize}
-
-% methodology overview
-Our approach for improving the RV precision is to eliminate the RV
-systematic errors, one of the two major contributors to the 'RV
-jitter' (the other being stellar jitter).
-
-We propose to work on: removal of RV systematic errors / annual jitter
-cause by the Earth's atmospheric absorption (telluric lines;
-Section~\ref{sec:tell}); improvements in wavelength-dependent
-statistical weighting in spectrum for RV extraction
-(Section~\ref{sec:vanking}); validation of the RV calibrator, the
-iodine atlas, using high-resolution echelle spectrograph
-(Section~\ref{sec:fts}); and improvements in data reduction and
-instrumental effect modeling for fiber-fed RV instruments
-(Section~\ref{sec:ip}). 
-
-% FTS
-Doppler reductions on the RV standard star HD 185144 yield a
-RV jitter of $\sim5$~\mps\ when using the new FTS atlas and
-$\sim4$~\mps\ with the old one.
-
-We took a 30\AA\ chunk of echelle absorption spectrum of
-the iodine cell at the McDonald 2.1m telescope and compared it with
-its FTS iodine atlas (also taken at KPNO in 1993 and thus can
-represent the quality of the KPNO FTS spectra).
-
-One key element in precise RV work with iodine is the ``ground truth"
-of the absorption spectrum of the iodine cell, which is normally a
-wavelength-calibrated, very high-resolution iodine atlas taken by a
-Fourier Transform Spectrometer (FTS). Treated as the ``true and perfect
-iodine spectrum", the FTS iodine atlas is used for modeling the iodine
-lines in the observed stellar$+$iodine spectrum to anchor the absolute
-wavelength solution and the spectrograph response function. Therefore,
-an accurate and precise iodine atlas is crucial for achieving high RV
-precision.
-
-When extracting RVs from the stellar spectrum obtained through an
-iodine cell, one relies on the modeling of the iodine lines using the
-``true lines" in the iodine atlas to anchor the absolute wavelength
-solution and the spectrograph response function (the ``spectral PSF").
-
-Modeling the observed iodine lines using this ``ground truth" iodine
-atlas anchors the absolute wavelength solution and the spectrograph
-response function (the `spectral PSF' or instrumental profile, `IP')
-when extracting RVs from the stellar spectrum.
-
-Modeling the observed Iodine lines with the FTS scan spectrum anchors
-the absolute wavelength solution and spectrograph response function
-when extracting RVs from the stellar spectrum.
-
-% data reduction and IP
-This part is for improving RV of fiber-fed spectrographs: \hrs,
-\minerva, and CHIRON.
-
-The new \hrs\ is going to have a different spectral format, which is
-very similar to what \minerva\ will have. We need to modify the data
-reduction and doppler code for \hrs\ to adapt to it to ensure it
-reaches the optimized precision. This will naturally also be
-preparation work for \minerva. Addressing the challenge of flat
-fielding for such spectral format will also help improve CHIRON.
-
-Another crucial work is to model the instrumental profile of fiber-fed
-spectrograph really well and to understand the problems that are
-unique for fibers. IP is very important and \hrs\ is not doing very
-well. We have acquired lots of engineering data on
-\hrs\ to specially designed for modeling IPs and understanding modal
-noise of fibers. Combined with years of engineering data and
-experience with CHIRON, improvement on IP modeling is ahead. This is
-also a natural preparation work for \minerva.
-
-
-% an old section
-\section{Relation to PI's Other NASA Grants}
-The PI of this proposal, Dr.~Jason Wright, has received NASA Keck
-time to search for long-period planet and multiple planet systems.
-The PI has also received NASA Keck time to follow up a
-\kepler\ planetary system with a strong TTV signal (Co-I Eric
-Ford). Both of these programs will of no doubt benefit from the
-improved Keck RV precision, and the upgraded \hrs\ is expected to
-follow up some if not all of the long-period planet systems and
-\kepler\ TTV systems in the future.
-
-% relevance to NASA
-\begin{itemize}[leftmargin=1.5em]
-  \vspace{-8pt}
-\item ``to search for planets and planetary systems about
-  nearby stars in our Galaxy": This is the direct science goal of our
-  work. 
-  \vspace{-5pt}
-\item ``to determine the properties of those stars that harbor
-  planetary systems": We will acquire high resolution spectra on
-  planet host stars with \keck\ and \hrs\ for, e.g. the
-  \kepler\ stars, as required by the RV technique. Improved RV
-  precision will also help better understanding stellar activities and
-  stellar RV jitter.
-  \vspace{-5pt}
-\item ``to determine the percentage of planets that are in or near the
-  Habitable Zone of a wide variety of stars and to measure their
-  orbits": Improved RV precision of \keck\ and \hrs\ will enable more
-  detections of potentially rocky exoplanets in the Habitable Zone of
-  their host stars, which is also the immediate goal of project \minerva.
-  \vspace{-8pt}
-\end{itemize}
-
-Our work will also support current and future NASA missions and
-enhance their scientific outcome: (1) the Kepler mission: Our work
-directly supports the Kepler mission through candidate
-validation/confirmation, planetary mass measurements, TTV target
-follow-up, and outer planet discovery using Keck/HIRES and
-HET/HRS. (2) TESS: Keck/HIRES, HET/HRS, and MINERVA can all contribute
-significantly to the follow-up programs of TESS. (3) JWST: Finding
-more lower mass exoplanets means more super Earths and Earth analogs,
-which are the primary targets for JWST for planetary atmosphere
-characterization. 
-
 \end{comment}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
