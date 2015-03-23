@@ -17,6 +17,7 @@ $(FILE).dvi : $(FILE).tex makefile references.bib
 $(FILE).pdf : $(FILE).dvi
 	$(DVIPDF) $(FILE).dvi
 	open $(FILE).pdf &
+	cp $(FILE).pdf /astro/grads/xxw131/Dropbox/Public/nessf2015.pdf
 
 clean :
 #	\rm *Notes.bib
