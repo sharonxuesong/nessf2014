@@ -35,60 +35,21 @@ and/or including any unanticipated opportunities, surprises, or unusual developm
 	Project Summary
 ########################################################################################
 3000 character limit!
- 
-Our project is on improving the radial velocity (RV) precision of
-several leading RV instruments, including Keck/HIRES and the 9.2m
-Hobby-Eberly Telescope (HET) with its High Resolution Spectrograph
-(HRS), which are the leading facilities for extensive Kepler follow-up
-observations as well as independent large and deep RV surveys. We also
-work with two precise RV instruments on small telescopes: CHIRON and
-the upcoming MINiature Exoplanet RV Array (MINERVA), which has or will
-have even higher RV precision.
 
-In our original proposal, our plans include: (1) removing the ~ 1 m/s
-RV systematics caused by telluric (water absorption) lines; (2)
-validating the calibrator: the iodine atlas for several instruments;
-(3) improving the wavelength-dependent statistical weighting; (4)
-improving data reduction and instrument modeling. We have made
-significant progress on all fronts, and carried out advanced studies
-and next-stage works for all items above. To be specific:
+Our project is on improving the radial velocity (RV) precision of several leading RV instruments, including Keck/HIRES and the 9.2m
+Hobby-Eberly Telescope (HET) with its High Resolution Spectrograph (HRS), which are the leading facilities for extensive Kepler follow-up observations as well as independent large and deep RV surveys. We also work with two precise RV instruments on small telescopes: CHIRON and the upcoming MINiature Exoplanet RV Array (MINERVA), which has or will have even higher RV precision.
 
-(1) We have created, for the first time, stellar spectral template
-that are free of telluric contamination. We have improved the removal
-of systematic signal caused by telluric lines by implementing the
-telluric-free template and also simple modeling of telluric spectrum
-in the star+iodine RV observations. We are in the final step of
-completing this work, and will re-analyze low-mass Kepler systems and
-dynamically rich planetary systems and publish our work.
+In our original proposal, our plans include: (1) removing the ~ 1 m/s RV systematics caused by telluric (water absorption) lines; (2) validating the calibrator: the iodine atlas for several instruments; (3) improving the wavelength-dependent statistical weighting; (4) improving data reduction and instrument modeling. We have made significant progress on all fronts, and carried out advanced studies and next-stage works for all items above. To be specific:
 
-(2) We have successfully carried out the promised echelle spectrograph
-observation of iodine cells and validated the iodine atlas of McDonald
-2.7m iodine cell, and ready for validation of MINERVA cell. More
-importantly, we have found evidence, for the first time in precise RV
-work, for changing cell properties for the HET/HRS iodine cell, for
-which we turn to theoretical code for further analysis and potentially
-production of even more accurate iodine atlases.
+(1) We went beyond our original plan and created, for the first time, stellar spectral templates that are free of telluric contamination, and we are also implementing forward modeling of telluric lines. These two advances improved even further the removal of RV systematics caused by telluric lines. We are in the final step of completing this work, and will re-analyze data for low-mass Kepler systems and dynamically rich planetary systems and publish our work.
 
-(3) & (4): We have found a better spectral PSF model for HET/HRS,
-which could be applied to other fiber-fed next-generation RV
-instruments as well. We are working towards better fitting of HET/HRS
-data, which will potentially bring >10 years of archival data to a
-higher RV precision and more planet discoveries or better
-characterization.
+(2) We have successfully carried out the promised echelle spectrograph observation of iodine cells and validated the iodine atlas of McDonald 2.7m iodine cell, and ready for validation of MINERVA cell. More importantly, we have found evidence, for the first time in precise RV work, for changing cell properties for the HET/HRS iodine cell, for which we turn to theoretical code for further analysis and potentially production of even more accurate iodine atlases.
 
-We are in the process of building the next-generation RV analysis code
-in Python for current and future RV surveys. The code is public,
-highly modular, and will incorporate modern numerical and statistical
-package for more robust RV estimate, using advanced packages with MCMC
-and Gaussian processes.
+(3) & (4): We have found a better spectral PSF model for HET/HRS, which could be applied to other fiber-fed next-generation RV instruments as well. We are working towards better fitting of HET/HRS data, which will potentially bring >10 years of archival data to a higher RV precision and more planet discoveries or better characterization.
 
-We plan to publish our work in two papers, and our new Python code
-will also be documented in peer-reviewed literature. The work in this
-project was presented as part of a Solar, Stellar, and Planetary
-Seminar talk at Harvard/CfA in October 2014, and will be presented in
-future meetings such as the Extreme Precise Radial Velocity Workshop
-in July 2015 at Yale, where I am invited to host a discussion session
-addressing the topic of telluric contamination in precise RV.
+We are building the next-generation RV analysis code in Python for current and future RV surveys. The code is public, highly modular, and will incorporate modern numerical and statistical package for more robust RV estimate, using advanced packages with MCMC and Gaussian processes.
+
+We are preparing to publish our work in two papers, and our new Python code will also be documented in peer-reviewed literature. The work in this project was presented as part of a Solar, Stellar, and Planetary Seminar talk at Harvard/CfA in October 2014, and will be presented in future meetings such as the Extreme Precise Radial Velocity Workshop in July 2015 at Yale, where I am invited to host a discussion session addressing the topic of telluric contamination in precise RV.
 
 
 ########################################################################################
