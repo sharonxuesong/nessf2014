@@ -1,0 +1,97 @@
+Late submission of NESSF renewal 2015
+March 23 2015
+
+########################################################################################
+	At Mercy of NASA Program Officer...
+########################################################################################
+
+Sharon:
+
+Because NSPIRES, the NASA proposal submission system, truncated the NESSF application opportunity at 11:59 p.m. on the March 16, you cannot use it to make a late submission.  However, as a one time exception, you will be allowed to submit a paper application which will then be transcribed into the system.
+
+I have attached the required forms to file a late NESSF application - NSPIRES cover pages 1 through 4 and the Program Specific Questions (which is a PDF document).
+
+The text pasted below was extracted from the NESSF 2014-2015 solicitation, which was posited on NSPIRES on 11/1/14 and contains the instructions for NESSF renewal applications.
+
+All of the required elements, along with the attached forms, must be combined into a single PDF document and transmuted via E-mail to me and to Susan Borden (who is cc'd on this message). 
+
+I urge you to work with your faculty advisor and Authorized Organizational Representative to file the renewal application as soon as possible.  
+
+Please let me know if you have any questions.
+
+Dolores Holland
+
+NESSF Renewal Applications must include:
+
+1.  NSPIRES generated proposal cover page to be completed on line, which includes a proposal summary/abstract and responses to the NESSF Program Specific Data questions, which includes the proposal budget;
+2.  A progress report, of approximately 3 to 6 uploaded pages (using an easily read font of no more than ~15 characters per inch [typically 12-point font] with at least 1-inch margins on all sides), which summarizes the work accomplished during the previous year, relating the actual accomplishments with the plan originally outlined in the proposal
+and/or including any unanticipated opportunities, surprises, or unusual developments; and a description of plans for the coming year, including explanations of any substantial deviation from the plan originally outlined in the proposal. Preprints or reprints may be uploaded, as appropriate;
+3.  An updated schedule for completing the degree program (there is no standard format);
+4.  A signed letter of recommendation from the student¹s academic advisor on institutional letterhead which must include the name of the student, the name of the proposing institution, and the NESSF proposal title; and
+5.  Unofficial, legible, and clearly unaltered transcripts for any classes taken during the previous year. If all or part of the student¹s Social Security Number or Date of Birth appears on the transcript, this MUST be blocked out prior to submission. This is the only alteration permitted to a transcript.
+
+
+########################################################################################
+	Project Summary
+########################################################################################
+3000 character limit!
+ 
+Our project is on improving the radial velocity (RV) precision of
+several leading RV instruments, including Keck/HIRES and the 9.2m
+Hobby-Eberly Telescope (HET) with its High Resolution Spectrograph
+(HRS), which are the leading facilities for extensive Kepler follow-up
+observations as well as independent large and deep RV surveys. We also
+work with two precise RV instruments on small telescopes: CHIRON and
+the upcoming MINiature Exoplanet RV Array (MINERVA), which has or will
+have even higher RV precision.
+
+In our original proposal, our plans include: (1) removing the ~ 1 m/s
+RV systematics caused by telluric (water absorption) lines; (2)
+validating the calibrator: the iodine atlas for several instruments;
+(3) improving the wavelength-dependent statistical weighting; (4)
+improving data reduction and instrument modeling. We have made
+significant progress on all fronts, and carried out advanced studies
+and next-stage works for all items above. To be specific:
+
+(1) We have created, for the first time, stellar spectral template
+that are free of telluric contamination. We have improved the removal
+of systematic signal caused by telluric lines by implementing the
+telluric-free template and also simple modeling of telluric spectrum
+in the star+iodine RV observations. We are in the final step of
+completing this work, and will re-analyze low-mass Kepler systems and
+dynamically rich planetary systems and publish our work.
+
+(2) We have successfully carried out the promised echelle spectrograph
+observation of iodine cells and validated the iodine atlas of McDonald
+2.7m iodine cell, and ready for validation of MINERVA cell. More
+importantly, we have found evidence, for the first time in precise RV
+work, for changing cell properties for the HET/HRS iodine cell, for
+which we turn to theoretical code for further analysis and potentially
+production of even more accurate iodine atlases.
+
+(3) & (4): We have found a better spectral PSF model for HET/HRS,
+which could be applied to other fiber-fed next-generation RV
+instruments as well. We are working towards better fitting of HET/HRS
+data, which will potentially bring >10 years of archival data to a
+higher RV precision and more planet discoveries or better
+characterization.
+
+We are in the process of building the next-generation RV analysis code
+in Python for current and future RV surveys. The code is public,
+highly modular, and will incorporate modern numerical and statistical
+package for more robust RV estimate, using advanced packages with MCMC
+and Gaussian processes.
+
+We plan to publish our work in two papers, and our new Python code
+will also be documented in peer-reviewed literature. The work in this
+project was presented as part of a Solar, Stellar, and Planetary
+Seminar talk at Harvard/CfA in October 2014, and will be presented in
+future meetings such as the Extreme Precise Radial Velocity Workshop
+in July 2015 at Yale, where I am invited to host a discussion session
+addressing the topic of telluric contamination in precise RV.
+
+
+########################################################################################
+				END OF FILE
+########################################################################################
+
