@@ -10,9 +10,9 @@ all: $(FILE).dvi $(FILE).pdf
 
 $(FILE).dvi : $(FILE).tex makefile references.bib
 	$(TEX) $(FILE)
-#	$(BIBTEX) $(FILE)
-#	$(TEX) $(FILE)
-#	$(TEX) $(FILE)
+	$(BIBTEX) $(FILE)
+	$(TEX) $(FILE)
+	$(TEX) $(FILE)
 
 $(FILE).pdf : $(FILE).dvi
 	$(DVIPDF) $(FILE).dvi
