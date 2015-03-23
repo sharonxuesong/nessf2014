@@ -89,6 +89,59 @@ outlined in the proposal.
 \section{Summary of Project and Orignal Plans}
 \vspace{-5pt}
 
+\begin{comment}
+  % old proposal summary
+The great synergy between NASA’s Kepler mission and the ground-based
+radial velocity (RV) surveys has made ground-breaking discoveries of
+exoplanets, including many interesting low- mass and likely rocky
+planets such as Kepler-78b, the first exoplanet known to have radius
+and mass very close to Earth’s. However, the cu rrent precision of
+radial velocimetry (~0.5–1 m/s) is limiting our ability to detect
+exoplanets with even lower masses or rocky planets further out in the
+orbit , especially in or near the Habitable Zone. We propose to
+improve the RV precision of several leading RV instruments (all using
+the iodine radial velocimetry), with the aim to find the lowest mass
+exoplanets. With improved RV precision, we will revisit and perform
+dynamic analysis on systems with multiple planets, espe cially the
+ones with small RV amplitudes, such as 55 Cancri, GJ 876, upsilon
+Andromedae, and GJ 581.
+
+Our work will eliminate > 1 m/s from the RV systematic errors and
+improve the precision of these instruments to a new level: (1) Keck
+and the Hobby-Eberly Teles cope (HET), which are the two leading
+facilities for extensive Kepler follow-up and independent RV surveys;
+(2) CHIRON and the upcoming MINERVA, which are desi gned to carry out
+high-cadence RV surveys on an interesting sample of nearby stars such
+as tau Ceti and alpha Centauri.
+
+We have identified several contributing factors to RV systematic
+errors through our pilot study, some of which are being recognized and
+studied in detail for th e very first time for precise radial
+velocimetry with iodine. We will determine the first comprehensive
+error budget of iodine radial velocimetry through: remov al of RV
+systematic errors / annual jitter caused by the Earth's atmospheric
+absorption (telluric lines); improvements in wavelength-dependent
+statistical weigh ting in spectrum for RV extraction; validation of
+the RV calibrator, the iodine atlas, using high-resolution echelle
+spectrograph; and improvements in data redu ction and instrumental
+effect modeling for fiber-fed RV instruments.
+
+Our work is closely related to NASA's scientific objectives (quotes
+are the objectives of the solicitation): Precise radial velocimetry
+aims at searching "for p lanets and planetary systems about nearby
+stars in our Galaxy", and our work is directly related to determining
+"the percentage of planets that are in or near t he Habitable Zone of
+a wide variety of stars and to measure their orbits" since improved RV
+precision will yield more detection of Earth- and super-Earth-like e
+xoplanets. Our work will help to "determine the properties of those
+stars that harbor planetary systems" through the high-resolution
+spectra taken during RV obs ervations and also through a better
+understanding of stellar RV signals thanks to a lower RV systematic
+errors. We directly support the Kepler mission, and in t he future,
+TESS, through follow-up programs.
+
+\end{comment}
+
 Our project is on improving the radial velocity precision...
 % define HET/HRS, MINERVA, CHIRON
 
@@ -102,9 +155,8 @@ In our original proposal, our plans include:
 
 (4) improving data reduction and instrument modeling.
 
-{\bf We have made significant progress on all fronts, essentially
-  finished all proposed work in the original proposal, and carried out
-  advanced studies and next-stage work for all items above}, as
+{\bf We have made significant progress on all fronts, and carried out
+  advanced studies and next-stage works for all items above}, as
 detailed in the next section. We plan to finish the on-going work
 described in Section~2 before the end of this funding cycle, and we
 lay out our plans for the next one, starting September 1 2015, in
@@ -227,17 +279,19 @@ We are now collaborating with the CHIRON group at Yale (Debra Fischer
 and Matt Giguere) to provide them with a telluric-free $\tau$ Ceti
 template, to enhance the RV accuracy and precision on this important
 RV standard star for better understanding of stellar activity induced
-RV signal.
+RV signal. We are also collaborating with John A.\ Johnson's group at
+Harvard to produce an even more superior stellar template which is
+derived based on many star$+$iodine observations.
 
-For (b): For the epoch observation (with the iodine cell), we have
-a implemented basic function of telluric line modeling in our RV code as
-a first step, where the water column density would be a fixed value
-for all observations. We are constructing the module which would fit
-for the water column density for each night and construct different
-telluric models. This would be the final step to fully modeling the
-telluric lines in RV observations, and thus provide the maximal
-capability of removing the biases within the frame of our current RV
-code (for work beyond this, see Section~\ref{sec:newrv}).
+For (b): For the star$+$iodine observations (with the iodine cell), we
+have a implemented basic function of telluric line modeling in our RV
+code as a first step, where the water column density would be a fixed
+value for all observations. We are constructing the module which would
+fit for the water column density for each night and construct
+different telluric models. This would be the final step to fully
+modeling the telluric lines in RV observations, and thus provide the
+maximal capability of removing the biases within the frame of our
+current RV code (for work beyond this, see Section~\ref{sec:newrv}).
 
 
 %---------------------------------------------------------------------------------------
@@ -271,7 +325,7 @@ done before June (first light of the proto-type MINERVA spectrograph).
   \vspace{-35pt}
   \begin{center}
     % cp /Volumes/RAID/rv/TS12/match_fts/figure/het70_comp.eps ./
-    % created by mask_test.pro
+    % created by plotcomp.pro
     \includegraphics[width=0.5\textwidth]{het70_comp}
   \end{center}
   \vspace{-25pt}  
@@ -355,12 +409,12 @@ derive for any instrument in this work in the near future.
   \label{fig:ip}
 \end{wrapfigure}
 
-One limiting factor for the current precision of \hrs\ is the modeling
-of its intrumental profile (IP, or the spectrograph response function
-or spectral PSF). In our original proposal, we promised to look for a
-better IP for \hrs, as a test case for future fiber-fed precise RV
-spectrographs, such as the upcoming MINERVA and the future fiber-fed
-Keck/HIRES.
+One limiting factor for the current RV precision of \hrs\ is the
+modeling of its intrumental profile (IP, or the spectrograph response
+function or spectral PSF). In our original proposal, we promised to
+look for a better IP for \hrs, as a test case for future fiber-fed
+precise RV spectrographs, such as the upcoming MINERVA and the future
+fiber-fed Keck/HIRES.
 
 The old IP model for \hrs\ is the very versatile, orthogonal,
 11-parameter Gauss-Hermite polynomials (GH). However, through our
@@ -372,7 +426,7 @@ address the issue with the fitter, see next section and future
 plans). A simpler IP is therefore in great desire.
 
 By analyzing iodine calibration spectra and IP function possibilities
-in Fourier space, we have found a better IP function for \hrs: the
+in Fourier space, we have found a better IP function for \hrs, the
 modified Moffat function:
 \begin{equation}
 [1+(x/\theta)^2]^{-\beta\cdot(x/\delta)^2}
@@ -398,7 +452,7 @@ modified Moffat IP to account for IP assymetry and subtle wings due to
 scattered light etc.; disentangling the effects of a bad IP model and
 bad iodine atlas (as described in previous sectio); and other tests
 with the aim to bring $\chi^2_\nu$ for fitting \hrs\ data to $\sim 1$,
-which is what is achieved at Keck and enabled $\sim 1$\mps\ RV
+which is what is achieved at Keck and enabled $\sim 1$ \mps\ RV
 precision.
 
 
@@ -408,6 +462,51 @@ precision.
 \subsection{Building the Next-Generation Data Analysis Tools for Future RV Surveys}\label{sec:newrv}
 \vspace{-5pt}
 
+The work described in the previous sections is all done with the
+California Planet Search Consortium Doppler code, which is a legacy
+code in IDL primarily written by John A.\ Johnson but with legacy
+parts that date back to the work of Marcy \& Butler as early as
+1989. It is proven to be able to produce RVs at $\sim 1$
+\mps\ precision with Keck data, and is behind the discoveries and
+characterization of numerous exoplanets, including the famous
+Kepler-78b, the first exoplanet known to have radius and mass very
+close to Earth's (as reported in \citealt{howard2013}, also see
+\citealt{pepe2013} for HARPS-N data).
+
+Yet, this great legacy code has many drawbacks: It is based on a
+simple home-constructed Levenberg–-Marquardt least chi-square fitter
+(LM fitter), and as mentioned in the previous sections, the LM fitter
+puts high requirement on initial guesses for parameters and is
+terribly inefficient and inadequate in exploring the chis-square
+space. It also has many legacy house keeping parts and complicated
+structures that makes it hard to upgrade, adopt for other instruments,
+and add new modules and functions.
+
+We have set out to write a new RV code that is built in {\it Python},
+taking full advantage of this open-source, object-orientated and
+modern language. The new code carries on the valuable successful
+parts of the CPS code over, and more importantly, it is built to be
+highly modular and thus will be easy to adopt for other instruments or
+for implementation of modern numerical and statistical tools.
+
+We have completed the design of basic and overall code structure, and
+finished building the core part of the code, where it fits one
+spectral chunk using any designated maximum likelihood style fitter
+(e.g.\ a better LM fitter, yielding a smaller $\chi^2_\nu$ when
+testing with Keck spectral chunks). We plan to finish the remaining
+parts of the code in order to make it fully functional for the
+upcoming commissioning data of MINERVA in Summer 2015. We also plan
+to implement many advanced tools into the code to make it more
+suitable for future RV surveys, which require higher precision and
+more capability dealing with spectral contamination or complex stellar
+spectra (see the next section for details).
+
+As of today there is no public precise RV code out in the community,
+and there is a large cry for such a code would allow for better
+transparency and cross checking of results. We have made our code
+publicly available through {\tt gitHub}, and we plan to document the methods
+in peer-reviewed literature once the code is ready to be released for
+the greater community.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -415,7 +514,37 @@ precision.
 \section{Future Plans}
 \vspace{-5pt}
 
+We have briefly touched on some of the future plans for the next
+funding cycle in the sections above. Here to summarize and elaborate:
 
+1.\ After finishing implementing forward-modeling of telluric lines in
+the RV code, we plan to re-run RV analyses for important targets such
+as the \kepler\ systems with low-mass planets (e.g.\ the
+\citealt{Marcy2014} targets), and dynamically interesting systems such
+as 55 Cancri, GJ 876, $\upsilon$ Andromedae, and GJ 581. Publication
+on the telluric line treatments and any interesting science outcome
+from the re-analyses is also our next top priority.
+
+2.\ If we can successfully improve the fitting with \hrs\ data with
+better iodine atlas and better IP modeling, we plan to re-run systems
+with low-mass planets and systems that are not among the Keck target
+list or not as frequently observed, to see if a higher precision will
+bring discoveries of more planets and better characterization of
+existing ones. Again, publication of the work on iodine atlas and any
+science outcome from the re-analyses is among our top priority.
+
+3.\ We plan to implement modern packages into our new RV code for more
+statistically robust estimates of RVs. In particular, we plan to go
+Bayesian by using the MCMC package by \cite{emcee}, which will
+essentially eliminate the issues of unstable/inefficient fitter,
+requirements on initial guesses, and unreliable/ambiguous error
+bars. To address the issue of stellar template uncertainties or any
+other persisting systematic effects in the spectra (e.g.\ residuals
+left after modeling out the telluric lines), we plan to implement the
+StarFish package by \cite{starfish}, which uses Gaussian processes to
+account for systematics in spectral modeling. These model packages
+will bring the Doppler analysis to the next level, and produce a truly
+modern code for modern RV surveys.
 
 
 
