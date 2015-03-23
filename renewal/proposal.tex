@@ -102,10 +102,13 @@ In our original proposal, our plans include:
 
 (4) improving data reduction and instrument modeling.
 
-We have made significant progress on all fronts, as detailed in the
-next section. We plan to finish the on-going work described in
-Section~2 before the end of this funding cycle, and we lay out our
-plans for the next one, starting September 1 2015, in Section~3.
+{\bf We have made significant progress on all fronts, essentially
+  finished all proposed work in the original proposal, and carried out
+  advanced studies and next-stage work for all items above}, as
+detailed in the next section. We plan to finish the on-going work
+described in Section~2 before the end of this funding cycle, and we
+lay out our plans for the next one, starting September 1 2015, in
+Section~3.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -335,14 +338,12 @@ derive for any instrument in this work in the near future.
 \subsection{A Better Instrumental Profile Model for Fiber-Fed Spectrographs}\label{sec:ip}
 \vspace{-5pt}
 
-In our original proposal, we
-
-\begin{wrapfigure}{l}{0.5\textwidth}
+\begin{wrapfigure}{l}{0.55\textwidth}
   \vspace{-35pt}
   \begin{center}
     %~/ExoPlanet-2010-2011/HET-HRS-IP/06-line_through_dots/thar_vs_moffat.eps
     % made by thar.pro
-    \includegraphics[width=0.55\textwidth]{thar_vs_moffat}
+    \includegraphics[width=0.52\textwidth]{thar_vs_moffat}
   \end{center}
   \vspace{-25pt}  
   \caption{Histogram of goodness of fit, $\chi_\nu^2$, values for
@@ -353,6 +354,53 @@ In our original proposal, we
   \vspace{-8pt}  
   \label{fig:ip}
 \end{wrapfigure}
+
+One limiting factor for the current precision of \hrs\ is the modeling
+of its intrumental profile (IP, or the spectrograph response function
+or spectral PSF). In our original proposal, we promised to look for a
+better IP for \hrs, as a test case for future fiber-fed precise RV
+spectrographs, such as the upcoming MINERVA and the future fiber-fed
+Keck/HIRES.
+
+The old IP model for \hrs\ is the very versatile, orthogonal,
+11-parameter Gauss-Hermite polynomials (GH). However, through our
+study during the past year, we have found that although GH is probably
+sufficient to describe the \hrs\ IP, because of its ultra flexibility
+and multi-parameters, it deeply complicates the $\chi^2$ space and
+very often hinders the fitter from finding the true minimal (to
+address the issue with the fitter, see next section and future
+plans). A simpler IP is therefore in great desire.
+
+By analyzing iodine calibration spectra and IP function possibilities
+in Fourier space, we have found a better IP function for \hrs: the
+modified Moffat function:
+\begin{equation}
+[1+(x/\theta)^2]^{-\beta\cdot(x/\delta)^2}
+\end{equation} 
+It is called the ``modified" Moffat function because the original
+Moffat function does not have the $(x/\delta)^2$ term. We added this
+term to add flexibility at the wings to enable change of characteristic
+IP width while preserving wing profile. Figure~\ref{fig:ip}
+illustrates the results: black line is the $\chi^2_\nu$ distribution
+for fitting spectral chunks in an observation with GH IP; red line is
+for modified Moffat IP; and dashed red is for fixing the IP in the
+shape of a thorium line (proving that thorium line is a good proxy for
+IP). This 3-parameter function fits the \hrs\ data almost equally
+well, and it fits very well to the observed thorium line
+(Figure~\ref{fig:ip} inset).
+
+This modified Moffat function can also be potentially used for other
+fiber-fed instruments, since these instruments tend to have IPs with
+the same characteristic flat top and sharp wings.
+
+Our on-going work includes: adding small perturbation term to the
+modified Moffat IP to account for IP assymetry and subtle wings due to
+scattered light etc.; disentangling the effects of a bad IP model and
+bad iodine atlas (as described in previous sectio); and other tests
+with the aim to bring $\chi^2_\nu$ for fitting \hrs\ data to $\sim 1$,
+which is what is achieved at Keck and enabled $\sim 1$\mps\ RV
+precision.
+
 
 
 %---------------------------------------------------------------------------------------
