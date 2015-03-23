@@ -102,7 +102,9 @@ In our original proposal, our plans include:
 (4) improving data reduction and instrument modeling.
 
 We have made significant progress on all fronts, as detailed in the
-next section.
+next section. We plan to finish the on-going work described in
+Section~2 before the end of this funding cycle, and we lay out our
+plans for the next one, starting September 1 2015, in Section~3.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -110,14 +112,15 @@ next section.
 \section{Progress and Achievements}
 \vspace{-5pt}
 
-We describe our progress on item (1) in Section~2.1 and in Section~2.2
-for items (2) and (4), and our new work described in Section~2.3
-address both (3) and (4).
+We describe our progress on item (1) in Section~\ref{sec:tell}, item
+(2) in Section~\ref{sec:fts} and item (3) in Section~\ref{sec:ip}. Our
+new work described in Section~\ref{sec:newrv} address both (3) and
+(4).
 
-Work described in Section~2.1 and 2.2 will lead to two publications
-(in prep.), and the work of Section~1.3 is in the form of a new code,
-written in {\it Python}, that is made available to the public and
-will also be presented and documented in peer-reviewed literature.
+We plan to publish the work described in Section~2.1 through 2.3 in two
+papers (in prep.), and the work of Section~1.3 is in the form of a new
+code, written in {\it Python}, that is made available to the public
+and will also be presented and documented in peer-reviewed literature.
 
 
 %---------------------------------------------------------------------------------------
@@ -130,22 +133,38 @@ Earth's atmosphere creates absorption lines (telluric lines) in the
 observed spectra based on which we derive the RVs of the stars. These
 telluric lines impersonate stellar lines but do not exhibit Doppler
 shifts, and thus they creates a bias to the measured RV, at a level of
-at least $\sim1$~\mps\. Our original plan was to create a
-sophisticated mask to flat the telluric-contaminated pixels as bad
-ones and ignore them, while tuning our modeling code to adjust to this
-change.
+at least $\sim1$~\mps. Our original plan was to improve the mask for
+flagging the telluric-contaminated pixels as bad ones, and also to
+tune the fitter in our modeling code to adjust to this change.
 
 However, during the past year, we have found that more elaborate
-solutions rather than simply `ignoring' the telluric pixels are
-necessary to sufficiently remove this bias in RV measurements.
+solutions rather than simply `ignoring' the telluric pixels would
+be more efficient in correcting the biases. As a result, we have made
+two major progresses:
 
+(a) We have created, for the first time, stellar spectral templates
+that are free of telluric contamination fro Keck observations.
 
+(b) We are incorporating a full forward-modeling module into the
+existing RV code to model the telluric lines in the epoch
+observations (work in final step).
 
-
-An example is shown in Figure~\ref{fig:tell}. 
-Reduction of power in the periodogram at harmonics of a sidereal year.
-We are confident that we will be able to apply our code and technique
-to all targets at Keck (and HET and other telescopes).
+Figure~\ref{fig:tell} illustrates the improvements made by these two
+new efforts. Similarly to Figure~1 shown in our original proposal,
+this is the RMS of RVs of a standard star observed by Keck. Different
+from the old Figure~1, this set of RVs were derived from a particular
+stellar template observation which had large amount of telluric
+contamination (i.e.\ deep water lines caused by humid observing
+condition). Our old approach of masking telluric pixels would bring
+only marginal improvement on these RVs. However, with our
+telluric-free stellar template and preliminary modeling
+implementation, a significant portion of the aliasing signal caused by
+the telluric lines is successfully removed (the trend shown in the
+third panel). We also see reduction of powers in the periodogram at
+harmonics of a sidereal year, which means that for future planet
+detection, successful removal of telluric-induced aliasing signal
+would boost detection confidence level or even reveal planet signals
+that otherwise would not be able emerge in the periodogram.
 
 \begin{figure}[thb]
   \vspace{-3pt}
@@ -167,10 +186,85 @@ to all targets at Keck (and HET and other telescopes).
 \end{figure}
 
 
+We have also applied our code to a couple more test targets at Keck,
+and we are confident that, with telluric-free templates and full
+incorporation of telluric lines in the forward-modeling process, we
+will be able improve the RV precision and accuracy for many targets at
+Keck, especially the stars which have low-mass, low-RV amplitude
+planets, such as some of the \kepler\ targets.
+
+We will public the work described in this section to share our efforts
+and results with the broader community, and moreover, I am invited to
+host a discussion session on treating the telluric contamination in
+precise RV work at the upcoming Extreme Precise Radial Velocity
+Workshop in July 2015 at Yale.
+
+Here is a more detailed description of the progress, including on-going work:
+
+For (a): Stellar spectral templates are derived based on observations
+of the target star (without an iodine cell) and thus is also subject
+to telluric contamination. We have created a pipeline for producing
+telluric-free stellar template for Keck (also adaptable for other
+instruments). Using the telluric simulation package TERRASPEC (written
+by Chad Bender, Penn State, based on the HITRAN molecular line
+database; ZZZ citation), we are able to determine the oxygen and water
+column densities based on the red portion of the spectra near
+7000\AA\ and construct telluric line model for the iodine region of
+the spectra. Then for each step of spectral modeling in the process of
+template creation, we are able to model the telluric lines and
+therefore remove it form the end product.
+
+We are now collaborating with the CHIRON group at Yale (Debra Fischer
+and Matt Giguere) to provide them with a telluric-free $\tau$ Ceti
+template, to enhance the RV accuracy and precision on this important
+RV standard star for better understanding of stellar activity induced
+RV signal.
+
+For (b): For the epoch observation (with the iodine cell), we have
+a implemented basic function of telluric line modeling in our RV code as
+a first step, where the water column density would be a fixed value
+for all observations. We are constructing the module which would fit
+for the water column density for each night and construct different
+telluric models. This would be the final step to fully modeling the
+telluric lines in RV observations, and thus provide the maximal
+capability of removing the biases within the frame of our current RV
+code (for work beyond this, see Section~\ref{sec:newrv}).
+
+
 %---------------------------------------------------------------------------------------
 \vspace{-10pt}
 \subsection{Evidence for Changes of Iodine Calibration Cells and Solutions}\label{sec:fts}
 \vspace{-5pt}
+
+A ``ground truth" iodine atlas is crucial for the precise iodine
+radial velocimetry. It is used for modeling the observed iodine lines
+in the stellar$+$iodine RV observation to anchor the absolute
+wavelengths and the spectrograph response function. Such a ``ground
+truth" atlas is normally obtained through a Fourier Transform
+Spectrometer (FTS). Our previous work has revealed potential problems
+with FTS atlases, and in our original proposal, we promised to use the
+TS12 arm of the Tull spectrograph at McDonald Observatory to validate
+the qualities of the FTS iodine atlases for HET/HRS, MINERVA, and the
+McDonald 2.7m (all three are important current or future RV
+instruments in the northern hemisphere).
+
+In October 2014, the TS12 observations were successfully carried
+out. All data are reduced and we have made comparisons between the
+TS12 spectra and FTS scans. For the 2.7m cell, its TS12 spectrum
+matches very well to its FTS atlas, again (together with the 2.1m cell
+data from 2013) proving that TS12 is an appropriate tool for
+validating FTS atlases. The TS12 spectra for the MINERVA cell is also
+ready, and right now we are waiting for the FTS expert on our team to
+reduce the MINERVA FTS data for comparison, which will be done before
+June (first light of the proto-type MINERVA spectrograph).
+
+Finally, for the HET/HRS iodine cell, we have taken its TS12 spectra
+at three different temperatures (50, 60, and 70$\degree$C, working
+temperature is 70$\degree$C). Our main findings are as follows:
+
+(a) 
+
+(b)
 
 \begin{wrapfigure}{r}{0.5\textwidth}
   \vspace{-35pt}
@@ -180,12 +274,14 @@ to all targets at Keck (and HET and other telescopes).
     \includegraphics[width=0.47\textwidth]{het70_comp}
   \end{center}
   \vspace{-25pt}  
-  \caption{TS12 spectrum vs.\ NIST FTS vs.\ KPNO FTS.} 
+  \caption{TS12 spectrum vs.\ NIST FTS vs.\ KPNO FTS for the HET/HRS
+    iodine cell, all convolved down to a resolution of $R=60,000$
+    (typical RV observation resolution) for comparison purposes.} 
   \vspace{-8pt}  
   \label{fig:fts}
 \end{wrapfigure}
 
- 
+
 
 
 %---------------------------------------------------------------------------------------
