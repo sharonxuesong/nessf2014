@@ -102,7 +102,7 @@ In our original proposal, our plans include:
 
 (1) removing the $>1$~\mps\ RV systematics caused by telluric lines;
 
-(2) validating the calibrator: the iodine atlas;
+(2) validating the calibrator: the iodine atlas for several instruments;
 
 (3) improving the wavelength-dependent statistical weighting;
 
@@ -110,7 +110,7 @@ In our original proposal, our plans include:
 
 {\bf We have made significant progress on all fronts, and carried out
   advanced studies and next-stage works for all items above}, as
-detailed in the next section. We plan to finish the ongoing work
+detailed in Section~2. We plan to finish the ongoing work
 described in Section~2 before the end of this funding cycle, and we
 lay out our plans for the next one, starting September 1 2015, in
 Section~3.
@@ -133,8 +133,9 @@ also be documented in peer-reviewed literature. Most of the work
 described here was presented in a Solar, Stellar, and Planetary
 Seminar talk at Harvard/CfA in October 2014, and will be presented in
 future meetings such as the Extreme Precise Radial Velocity Workshop
-in July 2015 at Yale and a couple of more other future meetings in
-2015--2016.
+in July 2015 at Yale, where I am invited to host a discussion session
+addressing the topic discussed in Section~\ref{sec:tell}, and also a
+couple of more other future meetings in 2015--2016.
 
 
 %---------------------------------------------------------------------------------------
@@ -148,38 +149,38 @@ observed spectra based on which we derive the RVs of the stars. These
 telluric lines impersonate stellar lines but do not exhibit Doppler
 shifts, and thus they creates a bias to the measured RV, at a level of
 at least $\sim1$~\mps. Our original plan was to improve the mask we
-used for ignoring the telluric-contaminated spectral regions, and also to
+used for throwing out the telluric-contaminated spectral regions, and also to
 tune the fitter in our modeling code to adjust to this change.
 
 However, during the past year, we have found that more elaborate
-solutions rather than simply `ignoring' the telluric regions would
+solutions rather than simply ``ignoring" the telluric regions would
 be more efficient in correcting the biases. As a result, we have made
 two major progresses:
 
 (a) We have created, for the first time, stellar spectral templates
-that are free of telluric contamination.
+(reference spectrum to measure the RV against) that are free of telluric contamination.
 
 (b) We are incorporating a full forward-modeling module into the
-existing RV code to model the telluric lines in the epoch
+existing RV code to model the telluric lines in the star$+$iodine
 observations (work in final step).
 
 Figure~\ref{fig:tell} illustrates the improvements made by these two
 new efforts. Similarly to Figure~1 shown in our original proposal,
 they show the RMS of RVs of a standard star observed by Keck before
-and after our telluric treatment. Different
-from the old Figure~1, this set of RVs were derived from a particular
-stellar template observation which had large amount of telluric
-contamination (i.e.\ deep water lines caused by humid observing
-condition). Our old approach of masking telluric pixels would bring
-only marginal improvement on these RVs. However, with our
-telluric-free stellar template and preliminary modeling
-implementation, a significant portion of the aliasing signal caused by
-the telluric lines is successfully removed (the trend shown in the
-third panel). We also see reduction of powers in the periodogram at
-harmonics of a sidereal year, which means that for future planet
-detection, successful removal of telluric-induced aliasing signal
-would boost detection confidence level or even reveal planet signals
-that otherwise would not be able emerge in the periodograms.
+and after our telluric treatment. Different from the old Figure~1,
+this set of RVs were derived from a particular stellar template
+observation which had large amount of telluric contamination
+(i.e.\ deep water lines caused by humid observing condition). Our old
+approach of ignoring telluric-contaminated regions would bring only
+marginal improvement on these RVs. However, with our telluric-free
+stellar template and preliminary modeling implementation, a
+significant portion of the aliasing signal caused by the telluric
+lines is successfully removed (the trend shown in the third panel). We
+also see reduction of powers in the periodogram at harmonics of a
+sidereal year, which means that for future planet detection,
+successful removal of telluric-induced aliasing signal would boost
+detection confidence level or even reveal planet signals that
+otherwise would not be able emerge in the periodograms.
 
 \begin{figure}[thb]
   \vspace{-3pt}
@@ -209,23 +210,18 @@ will be able improve the RV precision and accuracy for many targets at
 Keck, especially the stars which have low-mass, low-RV amplitude
 planets, such as some of the \kepler\ targets.
 
-Besides publication in preparation, as a result of this work, I am
-invited to host a discussion session on treating the telluric
-contamination in precise RV work at the upcoming Extreme Precise
-Radial Velocity Workshop in July 2015 at Yale.
-
 Here is a more detailed description of the progress, including ongoing work:
 
-For (a): Stellar spectral templates are derived based on observations
-of the target star (without an iodine cell) and thus is also subject
-to telluric contamination. We have created a pipeline for producing
-telluric-free stellar template for Keck (also adaptable for other
-instruments). Using the telluric simulation package TERRASPEC (written
-by Chad Bender, Penn State, based on the HITRAN molecular line
-database; \citealt{hitran2012}), we are able to determine the oxygen and water
-column densities based on the red portion of the spectra near
-7000\AA\ and construct telluric line model for the iodine region of
-the spectra. Then for each step of spectral modeling in the process of
+For (a): Stellar spectral templates are derived based on on-sky
+observations of the target star without an iodine cell and thus is
+also subject to telluric contamination. We have created a pipeline for
+producing telluric-free stellar template for Keck (also adaptable for
+other instruments). Using the telluric simulation package TERRASPEC
+(written by Chad Bender, Penn State, based on the HITRAN molecular
+line database; \citealt{hitran2012}), we are able to determine the
+oxygen and water column densities based on the red portion of the
+spectrum near 7000\AA\ and construct telluric line model for the bluer
+iodine region of the spectra. Then for each step in the process of
 template creation, we are able to model the telluric lines and
 therefore remove it form the end product.
 
@@ -237,11 +233,11 @@ RV signal. We are also collaborating with John A.\ Johnson's group at
 Harvard to produce an even more superior stellar template which is
 derived based on many star$+$iodine observations.
 
-For (b): For the star$+$iodine observations (with the iodine cell), we
-have a implemented basic function of telluric line modeling in our RV
+For (b): For the star$+$iodine observations (the RV observations), we
+have implemented basic telluric line model plug-in function in our RV
 code as a first step, where the water column density would be a fixed
 value for all observations. We are constructing the module which would
-fit for the water column density for each night and construct
+fit for the water column density for each observation and construct
 different telluric models. This would be the final step to fully
 modeling the telluric lines in RV observations, and thus provide the
 maximal capability of removing the biases within the frame of our
@@ -280,8 +276,7 @@ Spectrometer (FTS). Our previous work has revealed potential problems
 with FTS atlases, and in our original proposal, we promised to use the
 TS12 arm of the Tull spectrograph at McDonald Observatory to validate
 the qualities of the FTS iodine atlases for HET/HRS, MINERVA, and the
-McDonald 2.7m (all three are important current or future RV
-instruments in the northern hemisphere).
+McDonald 2.7m.
 
 In October 2014, the TS12 observations were successfully carried
 out. All data are reduced and we have made comparisons between the
@@ -338,9 +333,6 @@ changes (as reflected by actual HET/HRS observations instead of
 FTS/TS12 atlas observations), and to explore the possibility of using
 the theoretical output as the new ``ground-truth" atlas.
 
-We will publish these results and any iodine atlases or spectra we
-derive for any instrument in this work in the near future.
-
 
 %---------------------------------------------------------------------------------------
 \vspace{-10pt}
@@ -356,7 +348,7 @@ fiber-fed Keck/HIRES.
 
 The old IP model for \hrs\ is the very versatile, orthogonal,
 11-parameter Gauss-Hermite polynomials (GH). However, through our
-analyses of calibration frames in Fourier space, we have found that
+analyses using calibration frames in Fourier space, we have found that
 although GH is probably sufficient to describe the \hrs\ IP, because
 of its ultra flexibility and multi-parameters, it deeply complicates
 the $\chi^2$ space and very often hinders the fitter from finding the
@@ -377,7 +369,7 @@ for modified Moffat IP; and dashed red is for fixing the IP in the
 shape of a thorium line (proving that thorium line is a good proxy for
 IP). This 3-parameter function fits the \hrs\ data almost equally
 well, and it fits very well to the observed thorium line
-(Figure~\ref{fig:ip} inset).
+(Figure~\ref{fig:ip} inset, dots are observed thorium line).
 
 
 \begin{wrapfigure}{l}{0.55\textwidth}
@@ -398,7 +390,7 @@ well, and it fits very well to the observed thorium line
 \end{wrapfigure}
 
 
-This modified Moffat function can also be potentially used for other
+This modified Moffat function is potentially applicable to other
 fiber-fed instruments, since these instruments tend to have IPs with
 the same characteristic flat top and sharp wings.
 
@@ -442,10 +434,11 @@ numerical and statistical tools.
 
 We have completed the structural design and built the core part of the
 code, where it fits one spectral chunk using any designated maximum
-likelihood style fitter (e.g.\ a better LM fitter, yielding a smaller
-$\chi^2_\nu$ when testing with Keck spectral chunks). We plan to make
-it fully functional for the commissioning of MINERVA in
-Summer 2015 (see the next section for future plans).
+likelihood style fitter (e.g.\ a better LM fitter, which yield a
+smaller $\chi^2_\nu$ value when testing with Keck spectral chunks). We
+plan to make it fully functional for the commissioning of MINERVA in
+Summer 2015 (see Section~3 for future plans to implement more
+advanced tools).
 
 Currently there is a large cry in the RV community for a public,
 high-precision RV code which would allow better transparency and cross
@@ -469,8 +462,8 @@ as the \kepler\ systems with low-mass planets (e.g.\ the
 \citealt{Marcy2014} targets), and dynamically interesting systems such
 as 55 Cancri, GJ 876, $\upsilon$ Andromedae, and GJ 581 (as promised
 in the original proposal). Publication on the telluric line treatments
-and any interesting science outcome from the re-analyses is also our
-next top priority.
+and any interesting science outcome from the re-analyses is among our
+top priorities.
 
 2.\ If we can successfully improve the fitting with \hrs\ data with
 better iodine atlas and better IP modeling, we plan to re-run systems
@@ -478,24 +471,24 @@ with low-mass planets and systems that are not among the Keck target
 list or not as frequently observed, to see if a higher precision will
 bring discoveries of more planets and better characterization of
 existing ones. Again, publication of the work on iodine atlas and any
-science outcome from the re-analyses is among our top priority.
+science outcome from the re-analyses is our top priority.
 
 3.\ We plan to implement modern packages into our new RV code for more
 statistically robust estimates of RVs. In particular, we plan to go
-Bayesian by using the MCMC package by \cite{emcee}, which will
-essentially eliminate the issues of unstable/inefficient fitter,
-requirements on initial guesses, and unreliable/ambiguous error
-bars. Adopting Bayesian methods will also redefine and largely improve
-the wavelength-dependent statistical weighting process (which we are
-also currently exploring within the old code frame, in collaboration
-with Ben Nelson; as promised in the original proposal). To address the
-issue of stellar template uncertainties or any other persisting
-systematic effects in the spectra (e.g.\ residuals left after modeling
-out the telluric lines), we plan to implement the StarFish package by
-\cite{starfish}, which uses Gaussian processes to account for
-systematics in spectral modeling. These model packages will bring the
-Doppler analysis to the next level, and produce a truly modern code
-for modern RV surveys.
+Bayesian by using the MCMC package, {\tt emcee}, by \cite{emcee},
+which will essentially eliminate the issues of unstable/inefficient
+fitter, requirements on initial guesses, and unreliable/ambiguous
+error bars. Adopting Bayesian methods will also redefine and largely
+improve the wavelength-dependent statistical weighting process (which
+we are also currently exploring within the old code frame, in
+collaboration with Ben Nelson at PSU/Northwestern; as promised in the original
+proposal). To address the issue of stellar template uncertainties or
+any other persisting systematic effects in the spectra
+(e.g.\ residuals left after modeling out the telluric lines), we plan
+to implement the {\tt StarFish} package by \cite{starfish}, which uses
+Gaussian processes to account for systematics in spectral
+modeling. These model packages will bring the Doppler analysis to the
+next level, and produce a truly modern code for modern RV surveys.
 
 
 
