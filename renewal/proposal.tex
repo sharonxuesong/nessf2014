@@ -90,6 +90,7 @@ outlined in the proposal.
 \vspace{-5pt}
 
 Our project is on improving the radial velocity precision...
+% define HET/HRS, MINERVA, CHIRON
 
 In our original proposal, our plans include:
 
@@ -117,10 +118,15 @@ We describe our progress on item (1) in Section~\ref{sec:tell}, item
 new work described in Section~\ref{sec:newrv} address both (3) and
 (4).
 
-We plan to publish the work described in Section~2.1 through 2.3 in two
-papers (in prep.), and the work of Section~1.3 is in the form of a new
-code, written in {\it Python}, that is made available to the public
-and will also be presented and documented in peer-reviewed literature.
+We plan to publish the work described in Section~2.1 through 2.3 in
+two papers (in prep.), and the work of Section~1.3 is in the form of a
+new code, written in {\it Python}, that is made available to the
+public and will also be presented and documented in peer-reviewed
+literature. Most of the work described here was presented in a Solar,
+Stellar, and Planetary Seminar talk at Harvard/CfA in October 2014,
+and will be presented in future meetings such as the Extreme Precise
+Radial Velocity Workshop in July 2015 at Yale and a couple of more
+other future meetings in 2015--2016.
 
 
 %---------------------------------------------------------------------------------------
@@ -193,11 +199,11 @@ will be able improve the RV precision and accuracy for many targets at
 Keck, especially the stars which have low-mass, low-RV amplitude
 planets, such as some of the \kepler\ targets.
 
-We will public the work described in this section to share our efforts
-and results with the broader community, and moreover, I am invited to
-host a discussion session on treating the telluric contamination in
-precise RV work at the upcoming Extreme Precise Radial Velocity
-Workshop in July 2015 at Yale.
+We will publish the work described in this section to share our
+methods and findings with the broader community, and moreover, as a
+result of this work, I am invited to host a discussion session on
+treating the telluric contamination in precise RV work at the upcoming
+Extreme Precise Radial Velocity Workshop in July 2015 at Yale.
 
 Here is a more detailed description of the progress, including on-going work:
 
@@ -255,33 +261,74 @@ matches very well to its FTS atlas, again (together with the 2.1m cell
 data from 2013) proving that TS12 is an appropriate tool for
 validating FTS atlases. The TS12 spectra for the MINERVA cell is also
 ready, and right now we are waiting for the FTS expert on our team to
-reduce the MINERVA FTS data for comparison, which will be done before
-June (first light of the proto-type MINERVA spectrograph).
-
-Finally, for the HET/HRS iodine cell, we have taken its TS12 spectra
-at three different temperatures (50, 60, and 70$\degree$C, working
-temperature is 70$\degree$C). Our main findings are as follows:
-
-(a) 
-
-(b)
+reduce the MINERVA FTS data for comparison, which is expected to be
+done before June (first light of the proto-type MINERVA spectrograph).
 
 \begin{wrapfigure}{r}{0.5\textwidth}
   \vspace{-35pt}
   \begin{center}
     % cp /Volumes/RAID/rv/TS12/match_fts/figure/het70_comp.eps ./
     % created by mask_test.pro
-    \includegraphics[width=0.47\textwidth]{het70_comp}
+    \includegraphics[width=0.5\textwidth]{het70_comp}
   \end{center}
   \vspace{-25pt}  
   \caption{TS12 spectrum vs.\ NIST FTS vs.\ KPNO FTS for the HET/HRS
-    iodine cell, all convolved down to a resolution of $R=60,000$
-    (typical RV observation resolution) for comparison purposes.} 
+    iodine cell at 70$\degree$C, all convolved down to a resolution of
+    $R=60,000$ (typical RV observation resolution) for comparison
+    purposes.}
   \vspace{-8pt}  
   \label{fig:fts}
 \end{wrapfigure}
 
+Finally, for the HET/HRS iodine cell, we have taken its TS12 spectra
+at three different temperatures (50, 60, and 70$\degree$C; the RV
+working temperature for the cell is 70$\degree$C). Our main findings
+(both are first-time discoveries for iodine RV work) are as follows:
 
+(a) Temperature change (5--10$\degree$C) in iodine cell matters: The
+long suspected temperature-induced iodine spectrum change was finally
+confirmed, which is seen very visibly among the TS12 spectra taken at
+three different temperatures. Based on our NIST FTS atlases taken at
+two different temperatures, temperature change on the order of
+10$\degree$C should not induce visible line changes. However, we
+suspected issues with temperature control and data calibration with
+the NIST atlases, and the TS12 spectra confirmed our suspicion and
+proved that temperature on the order of even 5$\degree$C would have
+manifested as significant line changes (for precise RV purposes).
+
+(b) The HET/HRS cell very likely has changed over time: The TS12
+spectra match better with the more recent but potentially problematic
+NIST FTS atlas, which had worse $\chi^2_\nu$ fit than the old KPNO
+atlas. This is completely unexpected and suggests that: the NIST atlas
+was perhaps taken at the correct temperature (i.e.\ the KPNO atlas was
+at a lower and wrong temperature) but the worse fit was caused by
+calibration errors in the atlas; and/or the temperature or optical
+depth of the cell changes over the course of 20 years, and hence the
+differences between these three spectra (Figure~\ref{fig:fts}); and
+further more, it is possible that the temperature/optical depth of the
+cell changes on a much shorter scale during the observing seasons, and
+most of the time it stays at a temperature/optical depth that is
+similar to the one when the KPNO atlas was taken (e.g.\ actually at a
+lower temperature though thought to be at 70$\degree$C).
+
+To answer these questions, and also to go beyond diagnosis and
+actually resolve the issue of a changing cell, we have found a
+possible third venue that might provide reliable, ultra-high
+resolution, and wavelength calibrated iodine atlas -- a theoretical
+code that computes iodine transmission spectrum (at any specified
+temperature) based on both physics and empirical calibrations
+(IodineSpec5, zzz citation). We have successfully installed and
+learned the code, and properly translated the code output into
+practical astrophysical units and to account for optical depth
+differences. We are now using the code to diagnose the HET/HRS cell to
+study whether the cell temperature or optical depth changes (as
+reflected by actual HET/HRS observations instead of FTS/TS12 atlas
+observations), and to explore the possibility of using the theoretical
+output as the new ``ground-truth" atlas.
+
+We will publish these results and any ``ground-truth" iodine atlases
+or spectra we derive for any instrument in this work in the near
+future.
 
 
 %---------------------------------------------------------------------------------------
@@ -289,6 +336,7 @@ temperature is 70$\degree$C). Our main findings are as follows:
 \subsection{A Better Instrumental Profile Model for Fiber-Fed Spectrograph}\label{sec:ip}
 \vspace{-5pt}
 
+In our original proposal, we promised to 
 
 \begin{wrapfigure}{l}{0.5\textwidth}
   \vspace{-35pt}
